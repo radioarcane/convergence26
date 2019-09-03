@@ -6,12 +6,12 @@
 
          <h2>Submission Entry Form</h2>
 
-
-         <form id="submission-form" name="submissions" method="POST" data-netlify="true">
-
+         <form id="submission-form">
             <noscript>
                <p><strong>Sorry, but JavaScript is required to properly submit this form</strong></p>
             </noscript>
+
+            <input type="hidden" name="form-name" value="submissions" />
 
             <fieldset>
                <div class="grid">
@@ -44,6 +44,48 @@
             <div id="submission-form__sections">
             </div>
          </form>
+
+         <div id="placeholder-submission-form" style="display: none;" aria-hidden="true">
+            <form name="submissions" method="POST" netlify-honeypot="message" data-netlify="true" hidden>
+               <input type="hidden" name="subject" value="Convergence 26 Band/DJ/Talent Submission" readonly required>
+
+               <input type="text" name="contact_name" placeholder="Contact Name" readonly required>
+
+               <textarea name="message"></textarea>
+
+               <input type="email" name="email" placeholder="Email" required>
+
+               <input type="text" name="submission_type" placeholder="Submission Type" required>
+
+               <input type="text" name="name" placeholder="Name" required>
+
+               <input type="text" name="participated_past_convergence" placeholder="Have you participated in past Convergence(s)?" required>
+
+               <textarea name="past_convergence" placeholder="Which Convergence(s) did you participate in?"></textarea>
+
+               <textarea name="recent_shows" placeholder="List of your most recent shows"></textarea>
+
+               <textarea name="event_nights" placeholder="Event nights you are associated with"></textarea>
+
+               <textarea name="bio" required placeholder="Bio"></textarea>
+
+               <input type="text" name="website" placeholder="Website">
+
+               <input type="text" name="facebook" placeholder="Facebook">
+
+               <input type="text" name="instagram" placeholder="Instagram">
+
+               <input type="text" name="bandcamp" placeholder="Bandcamp">
+
+               <input type="text" name="soundcloud" placeholder="Soundcloud">
+
+               <input type="text" name="youtube" placeholder="YouTube">
+
+               <input type="text" name="mixcloud" placeholder="Mixcloud">
+
+               <input type="text" name="other_link" placeholder="Other Link">
+            </form>
+         </div>
       </section>
    </div>
 {% endblock %}

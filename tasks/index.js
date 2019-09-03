@@ -1,6 +1,7 @@
 /*
    Gulp entry file with your main commands
 */
+import fs from 'fs-extra';
 import gulp from 'gulp';
 import { scripts } from './webpack';
 import { server, serverReload }  from './server';
@@ -37,19 +38,6 @@ export const dev = gulp.series(watch);
 
 
 /*
-export function nunjucks() {
-   return new Promise(resolve => {
-      Promise.all([
-         nunjucksRender()
-      ])
-      .then(() => {
-         resolve();
-      });
-    });
-}
-*/
-
-/*
    Primary command to build a production version of the site.
 */
 export function build() {
@@ -57,8 +45,8 @@ export function build() {
       Promise.all([
          scripts(),
          gulpSass(),
-         //nunjucks()
-         nunjucksRender()
+         nunjucksRender(),
+         fs.copySync('./src/static', './public')
       ])
       .then(() => {
          resolve();

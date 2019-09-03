@@ -14,7 +14,8 @@ const bundler = webpack(webpackConfig);
 
 export function server() {
    const config = {
-      server: 'public',
+      serveStatic: ['./public', './src/static', {
+      }],
       middleware: [
          //webpackDevMiddleware(bundler, { /* options */ }),
          //webpackHotMiddleware(bundler),

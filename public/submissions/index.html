@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+    <title>Convergence 26 Louisville, KY</title>
+
+
+
+
+
+
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two:400,700italic,700|Lato:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+</head>
+
+<body>
+    <header class="masthead" role="banner">
+        <div class="masthead__content">
+            <a id="nav-toggle" class="masthead__hamburger" title="Menu" aria-label="Menu">
+                <svg viewBox="0 0 857.1 1000" class="icon">
+                    <path d="M857 750v71q0 15-10 25t-26 11H36q-15 0-25-11T0 821v-71q0-15 11-25t25-11h785q15 0 26 11t10 25zm0-286v72q0 14-10 25t-26 10H36q-15 0-25-10T0 536v-72q0-14 11-25t25-10h785q15 0 26 10t10 25zm0-285v71q0 14-10 25t-26 11H36q-15 0-25-11T0 250v-71q0-15 11-26t25-10h785q15 0 26 10t10 26z"></path>
+                </svg>
+            </a>
+
+            <nav class="masthead__nav" role="navigation">
+                <ul class="mast-nav">
+                    <li class="mast-nav__item">
+                        <a class="mast-nav__link" href="/#louisville">
+                            Louisville
+                        </a>
+                    </li>
+                    <li class="mast-nav__item">
+                        <a class="mast-nav__link" href="/#venue">
+                            The Venue
+                        </a>
+                    </li>
+                    <li class="mast-nav__item">
+                        <a class="mast-nav__link" href="/#travel">
+                            Travel
+                        </a>
+                    </li>
+                    <li class="mast-nav__item">
+                        <a class="mast-nav__link" href="/#accommodations">
+                            Accommodations
+                        </a>
+                    </li>
+                    <li class="mast-nav__item">
+                        <a class="mast-nav__link" href="/#attractions">
+                            Attractions
+                        </a>
+                    </li>
+                    <li class="mast-nav__item">
+                        <a class="mast-nav__link" href="/#food">
+                            Food
+                        </a>
+                    </li>
+                    <li class="mast-nav__item">
+                        <a class="mast-nav__link" href="/#about">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="mast-nav__item">
+                        <a class="mast-nav__link" href="/submissions">
+                            Submissions
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="masthead__text">
+                <h1 class="masthead__title">
+                    <span>Convergence 26</span> <span>Louisville, KY</span>
+                </h1>
+                <span class="masthead__subtitle">
+                    May 15-17, 2020
+                </span>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main-content" role="main">
+
+        <div class="block">
+            <section class="container">
+
+                <h2>Submission Entry Form</h2>
+
+                <form id="submission-form">
+                    <noscript>
+                        <p><strong>Sorry, but JavaScript is required to properly submit this form</strong></p>
+                    </noscript>
+
+                    <input type="hidden" name="form-name" value="submissions">
+
+                    <fieldset>
+                        <div class="grid">
+                            <div class="grid__item xs-12 md-6">
+                                <label for="contact_name">
+                                    <span class="required-label">Contact Name:</span>
+                                    <input type="text" id="contact_name" name="contact_name" maxlength="200" required="">
+                                </label>
+                            </div>
+                            <div class="grid__item xs-12 md-6">
+                                <label for="email">
+                                    <span class="required-label">Email:</span>
+                                    <input type="email" id="email" name="email" maxlength="200" required="">
+                                </label>
+                            </div>
+                            <div class="grid__item xs-12 md-6">
+                                <label for="submission_type">
+                                    <span class="required-label">Submission Type:</span>
+                                    <select id="submission_type" name="submission_type" required="">
+                                        <option value="">Select...</option>
+                                        <option value="Band">Band</option>
+                                        <option value="DJ">DJ</option>
+                                        <option value="Talent">Talent</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div id="submission-form__sections">
+                    </div>
+                </form>
+
+                <div id="placeholder-submission-form" style="display: none;" aria-hidden="true">
+                    <form name="submissions" method="POST" netlify-honeypot="message" data-netlify="true" hidden="">
+                        <input type="hidden" name="subject" value="Convergence 26 Band/DJ/Talent Submission" readonly="" required="">
+
+                        <input type="text" name="contact_name" placeholder="Contact Name" readonly="" required="">
+
+                        <textarea name="message"></textarea>
+
+                        <input type="email" name="email" placeholder="Email" required="">
+
+                        <input type="text" name="submission_type" placeholder="Submission Type" required="">
+
+                        <input type="text" name="name" placeholder="Name" required="">
+
+                        <input type="text" name="participated_past_convergence" placeholder="Have you participated in past Convergence(s)?" required="">
+
+                        <textarea name="past_convergence" placeholder="Which Convergence(s) did you participate in?"></textarea>
+
+                        <textarea name="recent_shows" placeholder="List of your most recent shows"></textarea>
+
+                        <textarea name="event_nights" placeholder="Event nights you are associated with"></textarea>
+
+                        <textarea name="bio" required="" placeholder="Bio"></textarea>
+
+                        <input type="text" name="website" placeholder="Website">
+
+                        <input type="text" name="facebook" placeholder="Facebook">
+
+                        <input type="text" name="instagram" placeholder="Instagram">
+
+                        <input type="text" name="bandcamp" placeholder="Bandcamp">
+
+                        <input type="text" name="soundcloud" placeholder="Soundcloud">
+
+                        <input type="text" name="youtube" placeholder="YouTube">
+
+                        <input type="text" name="mixcloud" placeholder="Mixcloud">
+
+                        <input type="text" name="other_link" placeholder="Other Link">
+                    </form>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+    </footer>
+
+
+
+    <!--[if lte IE 9]>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom4/2.0.0/dom4.js"></script>
+<![endif]-->
+
+    <script src="/js/main.bundle.js"></script>
+
+
+
+
+
+</body>
+
+</html>

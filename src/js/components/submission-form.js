@@ -3,7 +3,7 @@ function getSubmitBtnHtml() {
    return `
       <div class="grid">
          <div class="grid__item xs-12 text-center">
-            <button type="submit">
+            <button type="submit" class="btn">
                Submit Form
             </button>
          </div>
@@ -298,6 +298,8 @@ function setupPastConvergenceQuestion(node) {
 }
 
 function setupForm(node) {
+   node.setAttribute('method', 'POST');
+
    const submissionType = node.querySelector('#submission_type');
    const container = node.querySelector('#submission-form__sections');
    let html = null;
@@ -330,9 +332,11 @@ function setupForm(node) {
 
 export const init = () => {
    const submissionForm = document.getElementById('submission-form');
+   const placeholderContainer = document.getElementById('placeholder-submission-form');
 
    if (submissionForm) {
       setupForm(submissionForm);
+      placeholderContainer.innerHTML = '';
    }
 };
 
