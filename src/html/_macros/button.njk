@@ -1,0 +1,78 @@
+{% macro link(text='', url='#', style=false, newTab=false, classes=false) %}
+   {% set targetCode = 'target="_blank"' %}
+
+  <a class="btn{{ ' btn--' + style if style }}{{ ' ' + classes if classes }}"
+     href="{{ url }}"
+     {{ targetCode |safe if newTab }}
+   >
+     {{ text }}
+  </a>
+{% endmacro %}
+
+
+{% macro submit(text='', style=false, disabled=false) %}
+   {% set disabledCode = 'disabled="disabled" aria-disabled="true"' %}
+
+   <input class="btn{{ ' btn--' + style if style }}"
+         type="submit"
+         value="{{ text }}"
+         {{ disabledCode |safe if disabled }}
+   >
+{% endmacro %}
+
+{% macro button(text='', style=false, disabled=false, buttonType=false) %}
+   {% set disabledCode = 'disabled="disabled" aria-disabled="true"' %}
+   {% set btnTypeCode = 'type="{{ buttonType }}"' %}
+
+   <input class="btn{{ ' btn--' + style if style }}"
+         value="{{ text }}"
+         {{ btnTypeCode |safe if buttonType }}
+         {{ disabledCode |safe if disabled }}
+   >
+{% endmacro %}
+
+{% macro amazon(text='', url='', style=false, classes=false) %}
+   {% set targetCode = 'target="_blank"' %}
+
+  <a class="btn btn--icon{{ ' btn--' + style if style }}{{ ' ' + classes if classes }}"
+     href="{{ url }}"
+     target="_blank"
+   >
+      <picture>
+         <source srcset="/assets/img/logos/amazon-100x100.webp" type="image/webp">
+         <source srcset="/assets/img/logos/amazon-100x100.png" type="image/png">
+         <img src="/assets/img/logos/amazon-100x100.png" alt="Amazon" class="btn__icon">
+      </picture>
+
+     {{ text }}
+  </a>
+{% endmacro %}
+
+{% macro barnes(text='', url='', style=false, classes='') %}
+   {% set targetCode = 'target="_blank"' %}
+
+  <a class="btn btn--icon{{ ' btn--' + style if style }}{{ ' ' + classes if classes }}"
+     href="{{ url }}"
+     target="_blank"
+   >
+      <picture>
+         <source srcset="/assets/img/logos/barnes-and-noble-100x100.webp" type="image/webp">
+         <source srcset="/assets/img/logos/barnes-and-noble-100x100.png" type="image/png">
+         <img src="/assets/img/logos/barnes-and-noble-100x100.png" alt="Barnes & Noble" class="btn__icon">
+      </picture>
+
+     {{ text }}
+  </a>
+{% endmacro %}
+
+{% macro youtube(text='', url='', classes=false) %}
+   {% set targetCode = 'target="_blank"' %}
+
+  <a class="btn btn--youtube{{ ' ' + classes if classes }}"
+     href="{{ url }}"
+     target="_blank"
+   >
+      <img inline src="/assets/img/icons/youtube.svg" alt="YouTube" class="icon icon--youtube">
+     {{ text }}
+  </a>
+{% endmacro %}

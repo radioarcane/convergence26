@@ -1,0 +1,4 @@
+
+@function span-percentage-width($span-columns, $total-number-of-columns: 12) {
+    @return ($span-columns / $total-number-of-columns) * 100%;
+}

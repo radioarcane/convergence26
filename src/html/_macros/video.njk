@@ -1,0 +1,12 @@
+{% macro youtube(id, title=false) %}
+   {% if title %}
+      <h4 class="video__title">{{ title }}</h4>
+   {% endif %}
+
+   <div class="video">
+      <div class="video__wrapper">
+         <iframe class="video__frame" src="https://www.youtube.com/embed/{{ id }}" allowfullscreen frameborder="0">
+         </iframe>
+      </div>
+   </div>
+{% endmacro %}

@@ -1,0 +1,24 @@
+{% set metaPageTitle = pageTitle + ' | ' + siteName if pageTitle else siteName %}
+
+<title>{{ metaPageTitle | truncate(120, true, "...") }}</title>
+
+{% if canonical %}
+   <link rel="canonical" href="{{ canonical }}">
+{% endif %}
+
+{% if metaDescription %}
+   <meta name="description" content="{{ metaDescription | truncate(252, true, '...') }}">
+{% endif %}
+
+{% if canonical %}
+   <meta property="og:site_name" content="{{ siteName }}">
+   <meta property="og:title" content="{{ metaPageTitle | truncate(120, true, '...') }}">
+   <meta property="og:locale" content="en_US">
+
+   {% if metaDescription %}
+      <meta name="og:description" content="{{ metaDescription | truncate(252, true, '...') }}">
+   {% endif %}
+
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="{{ canonical }}">
+{% endif %}

@@ -1,0 +1,41 @@
+@mixin mediaQueryMin($min-width: null, $include-print: false) {
+    @if not $min-width or $min-width == "" or $min-width <= 0  {
+        @content;
+    }
+    @else {
+        @if $include-print {
+            @media only print, only screen and (min-width: $min-width) {
+                @content;
+            }
+        }
+        @else {	
+            @media screen and (min-width: $min-width) {
+                @content;
+            }
+        }
+    }	
+}
+
+@mixin breakpoint($min-width, $include-print: false) {
+    @include mediaQueryMin($min-width, $include-print) {
+        @content;
+    }
+}
+
+@mixin mediaQueryMax($max-width: null, $include-print: false) {
+    @if not $max-width or $max-width == "" or $max-width <= 0  {
+        @content;
+    }
+    @else {
+        @if $include-print {
+            @media only print, only screen and (max-width: $max-width) {
+                @content;
+            }
+        }
+        @else {	
+            @media screen and (max-width: $max-width) {
+                @content;
+            }
+        }
+    }	
+}

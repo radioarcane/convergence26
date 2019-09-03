@@ -1,0 +1,171 @@
+
+.masthead {
+   background-image: url('/img/louisville-skyline.jpg');
+   background-position: center -150px;
+   background-repeat: no-repeat;
+   background-size: scale;
+   background-color: $black;
+   min-height: 300px;
+   position: relative;
+   border-bottom: 1px solid hex-to-rgba(lighten($white, 90), .75);
+
+   @include breakpoint($screen-l-min) {
+      min-height: 500px;
+      background-position: center center;
+      background-size: cover;
+   }
+
+   @include breakpoint($screen-xl-min) {
+      min-height: 600px;
+   }
+}
+
+.masthead {
+   &__hamburger {
+      color: $white;
+      cursor: pointer;
+      border: 1px solid $white;
+      font-size: 32px;
+      padding: 0px 8px 6px;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 20;
+
+      &:hover,
+      &:focus {
+         color: darken($white, 15%);
+      }
+
+      @include breakpoint($screen-l-min) {
+         display: none;
+      }
+   }
+
+   &__nav {
+      width: 300px;
+      right: -300px;
+      transition: all 200ms ease-in-out;
+      background: hex-to-rgba($black, .93);
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      height: 100vh;
+      z-index: 300;
+      padding: 0 $gutter-width;
+      font-size: 1.3rem;
+      text-align: right;
+
+      &--active {
+         right: 0;
+
+         @include breakpoint($screen-l-min) {
+            right: auto;
+         }
+      }
+
+      @include breakpoint($screen-l-min) {
+         //background: transparent;
+         background-color: #4a4746;
+         background: linear-gradient(90deg,#241f1f 0,#241f1f 32%,#4a4746);
+         width: auto;
+         position: relative;
+         top: auto;
+         right: auto;
+         text-align: center;
+         height: auto;
+         font-size: 1.2rem;
+         border-bottom: 1px solid hex-to-rgba($white, 0.6);
+      }
+
+
+      &:before {
+         content: "Navigation";
+         display: block;
+         text-transform: uppercase;
+         color: #999;
+         letter-spacing: .15625em;
+         margin: 0 0 0.5em;
+
+         @include breakpoint($screen-l-min) {
+            content: "";
+            display: none;
+         }
+      }
+   }
+}
+
+.masthead__text {
+   padding: 1rem ($gutter-width/2) 0;
+   font-family: $heading-font;
+
+   @include breakpoint($screen-m-min) {
+      padding-left: $gutter-width;
+   }
+
+   @include breakpoint($screen-l-min) {
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+   }
+}
+
+.masthead__title {
+   margin: 0;
+
+   span {
+      display: block;
+
+      @include breakpoint($screen-m-min) {
+         display: inline-block;
+
+         &:first-child {
+            &:after {
+               content: "\00a0\2013";
+               display: inline-block;
+            }
+         }
+      }
+   }
+}
+
+.masthead__subtitle {
+   @include fluid-type($screen-s-min, $screen-xxl-min, 18px, 32px);
+}
+
+.mast-nav {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   color: $white;
+
+   @include breakpoint($screen-l-min) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   &__item {
+      margin: 0 0 0.5em;
+
+      @include breakpoint($screen-l-min) {
+         margin: 0;
+      }
+   }
+
+   &__link {
+      text-decoration: none;
+      color: $white;
+      display: inline-block;
+      background-color: transparent;
+      transition: all 140ms ease-in-out;
+
+      &:hover,
+      &:focus {
+         color: darken($white, 20%);
+      }
+
+      @include breakpoint($screen-l-min) {
+         padding: .5em .4em;
+      }
+   }
+}

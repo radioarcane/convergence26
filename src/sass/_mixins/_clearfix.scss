@@ -1,0 +1,46 @@
+/// Provides an easy way to include a clearfix for containing floats.
+/// By default this uses the latest clearfix standard that should work fine with
+/// all modern browsers.
+/// If you wish to use the old clearfix standard, pass in a false variable for the
+/// parameter.
+/// This mixin is prefixed with the "local" namespace since other third-party
+/// libraries sometimes include a clearfix mixin that might be loaded globally and we do not
+/// want naming conflicts in our global scope if you choice to add this mixin to
+/// your global scope.
+///
+/// @link http://cssmojo.com/latest_new_clearfix_so_far/
+///
+/// @param {bool} $useNewClearfix [true] - Set param to false to output old clearfix standard.
+///
+/// @example scss - Usage
+///     .element {
+///         @include local-ClearFix;
+///     }
+///
+/// @example css - CSS Output
+///     .element::after {
+///         clear: both;
+///         content: "";
+///         display: table;
+///     }
+
+@mixin clearFix($useNewClearfix: true) {
+    @if $useNewClearfix {
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    @else {
+        &:before,
+        &:after {
+            content: "";
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+        }
+    }
+}

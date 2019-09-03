@@ -1,0 +1,84 @@
+@function substract-pixels($value: 0, $pixels: 1, $base-font-size: 16)
+{
+    $unit-less-number: strip-unit($value);
+    $unit: to-lower-case(unit($value));
+
+    @if $unit == 'em' or $unit == 'rem' {
+        $unit-less-number: $unit-less-number - ($pixels / $base-font-size);
+    }
+    @else {
+        $unit-less-number: $unit-less-number - $pixels;
+    }
+    
+    @return unquote($unit-less-number + $unit);
+}
+
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+
+@function rems-to-pixels($rems, $rem-base: 16) {
+    $rems: strip-unit($rems) * strip-unit($rem-base) * 1px;
+    
+    @if $rems == 0px {
+        $rems: 0;
+    }
+    
+    @return $rems;   
+}
+
+
+@function pixels-to-rems($pixels, $rem-base: 16) {
+    $pixels: strip-unit($pixels) / strip-unit($rem-base) * 1rem;
+    
+    @if $pixels == 0rem {
+        $pixels: 0;
+    }
+    
+    @return $pixels;   
+}
+
+
+@function pixels-to-ems($pixels, $parent-font-size) {
+    $pixels: strip-unit($pixels) / strip-unit($parent-font-size) * 1em;
+    
+    @if $pixels == 0em {
+        $pixels: 0;
+    }
+    
+    @return $pixels;   
+}
+    
+    
+@function ems-to-pixels($ems, $parent-base-font: 16) {
+    $ems: strip-unit($ems) * strip-unit($parent-base-font) * 1px;
+    
+    @if $ems == 0px {
+        $ems: 0;
+    }
+    
+    @return $ems;   
+}
+
+
+@function add-pixels($value: 0, $pixels: 1, $base-font-size: 16)
+{
+    $unit-less-number: strip-unit($value);
+    $unit: to-lower-case(unit($value));
+
+    @if $unit == 'em' or $unit == 'rem' {
+        $unit-less-number: $unit-less-number + ($pixels / $base-font-size);
+    }
+    @else {
+        $unit-less-number: $unit-less-number + $pixels;
+    }
+    
+    @return unquote($unit-less-number + $unit);
+}
+

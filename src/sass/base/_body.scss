@@ -1,0 +1,28 @@
+* {
+   &,
+   &:before,
+   &:after {
+      box-sizing: border-box;
+   }
+}
+
+html {
+   font-size: $font-base-size;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+body {
+   position: relative;
+   background: $body-bg;
+   color: $text-color;
+   font-family: $body-font;
+   font-weight: 400;
+   line-height: $line-height-default;
+   margin: 0;
+   padding: 0;
+   @include fluid-type($screen-s-min, $screen-xxl-min, 18px, 22px);
+}

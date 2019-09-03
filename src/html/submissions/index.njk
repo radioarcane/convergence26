@@ -1,0 +1,49 @@
+{% extends '_layouts/default.njk' %}
+
+{% block main %}
+   <div class="block">
+      <section class="container">
+
+         <h2>Submission Entry Form</h2>
+
+
+         <form id="submission-form" name="submissions" method="POST" data-netlify="true">
+
+            <noscript>
+               <p><strong>Sorry, but JavaScript is required to properly submit this form</strong></p>
+            </noscript>
+
+            <fieldset>
+               <div class="grid">
+                  <div class="grid__item xs-12 md-6">
+                     <label for="contact_name">
+                        <span class="required-label">Contact Name:</span>
+                        <input type="text" id="contact_name" name="contact_name" maxlength="200" required>
+                     </label>
+                  </div>
+                  <div class="grid__item xs-12 md-6">
+                     <label for="email">
+                        <span class="required-label">Email:</span>
+                        <input type="email" id="email" name="email" maxlength="200" required>
+                     </label>
+                  </div>
+                  <div class="grid__item xs-12 md-6">
+                     <label for="submission_type">
+                        <span class="required-label">Submission Type:</span>
+                        <select id="submission_type" name="submission_type" required>
+                           <option value="">Select...</option>
+                           <option value="Band">Band</option>
+                           <option value="DJ">DJ</option>
+                           <option value="Talent">Talent</option>
+                        </select>
+                     </label>
+                  </div>
+               </div>
+            </fieldset>
+
+            <div id="submission-form__sections">
+            </div>
+         </form>
+      </section>
+   </div>
+{% endblock %}

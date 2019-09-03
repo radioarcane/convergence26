@@ -1,0 +1,8 @@
+
+@function hex-to-rgb($hex) {
+    @return rgb(red($hex), green($hex), blue($hex));
+}
+
+@function hex-to-rgba($hex, $opacity: 1) {
+    @return rgba(red($hex), green($hex), blue($hex), $opacity);
+}
