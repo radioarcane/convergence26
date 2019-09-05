@@ -1,4 +1,4 @@
-{% set metaPageTitle = pageTitle + ' | ' + siteName if pageTitle else siteName %}
+{% set metaPageTitle = pageTitle if pageTitle else siteName %}
 
 <title>{{ metaPageTitle | truncate(70, true, "...") }}</title>
 
