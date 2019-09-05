@@ -1,6 +1,7 @@
 {
-   "siteName": "Convergence 26 Louisville, KY",
-   "domain": "http://www.altgothic.com/c26sdf",
+   "siteName": "Convergence 26",
+   "domain": "https://www.convergence26.com",
+   "cacheBust": "1",
    "attractions": [{
       "name": "Speed Art Museum",
       "url": "https://www.speedmuseum.org"

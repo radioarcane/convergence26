@@ -1,22 +1,34 @@
 
 .masthead {
-   background-image: url('/img/louisville-skyline.jpg');
-   background-position: center -150px;
+   background-image: url('/img/convergence-26-banner-600x388.jpg');
+   background-position: center center;
    background-repeat: no-repeat;
-   background-size: scale;
+   background-size: contain;
    background-color: $black;
-   min-height: 300px;
+   height: 280px;
    position: relative;
    border-bottom: 1px solid hex-to-rgba(lighten($white, 90), .75);
 
+   @include breakpoint(600px) {
+      background-image: url('/img/convergence-26-banner-1000x563.jpg');
+      background-size: contain;
+      height: 400px;
+   }
+
    @include breakpoint($screen-l-min) {
-      min-height: 500px;
-      background-position: center center;
-      background-size: cover;
+      background-image: url('/img/convergence-26-banner-1200x675.jpg');
+      height: 600px;
+      background-size: contain;
    }
 
    @include breakpoint($screen-xl-min) {
-      min-height: 600px;
+      background-image: url('/img/convergence-26-banner-1600x684.jpg');
+      background-size: auto 500px;
+      background-position: center bottom;
+   }
+
+   @include breakpoint($screen-xxl-min) {
+      background-size: auto 550px;
    }
 }
 
