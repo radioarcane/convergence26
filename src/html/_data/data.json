@@ -1,7 +1,7 @@
 {
    "siteName": "Convergence 26",
    "domain": "https://www.convergence26.com",
-   "cacheBust": "1",
+   "cacheBust": "2",
    "attractions": [{
       "name": "Speed Art Museum",
       "url": "https://www.speedmuseum.org"
