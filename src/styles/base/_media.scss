@@ -1,0 +1,23 @@
+img {
+   border: 0;
+   display: inline-block;
+   vertical-align: middle;
+   max-width: 100%;
+   height: auto;
+   -ms-interpolation-mode: bicubic;
+}
+
+figure {
+   padding: 0;
+   margin: 0 0 $padding-vertical;
+}
+
+figcaption {
+   margin-top: $padding-vertical / 2;
+}
+
+iframe {
+   display: block;
+   border: 0;
+   width: 100%;
+}

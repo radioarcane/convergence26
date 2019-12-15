@@ -1,5 +1,8 @@
 /node_modules
-/public
 /.idea
 /.vscode
+/dist
 npm-debug.log
+/public
+/src/html/_data/blogs.json
+/tmp

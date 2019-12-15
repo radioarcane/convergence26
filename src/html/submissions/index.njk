@@ -1,95 +1,15 @@
-{% set canonical = domain + '/submissions' %}
-{% set pageTitle = 'Band & DJ Submissions | Convergence 26' %}
+{% set pageTitle = 'Band & DJ Submissions | Convergence 26 - Louisville, KY' %}
 
 {% extends '_layouts/default.njk' %}
 
 {% block main %}
-   <div class="block">
-      <section class="container">
-         <h2>Submission Entry Form</h2>
+   <article class="container">
+      <div class="block">
+         <h1 class="title">Band & DJ Submissions</h1>
 
-         <form id="submission-form">
-            <noscript>
-               <p><strong>Sorry, but JavaScript is required to properly submit this form</strong></p>
-            </noscript>
-
-            <input type="hidden" name="form-name" value="submissions" readonly />
-
-            <input type="hidden" name="subject" value="Convergence 26 Band, DJ, Talent Submission" readonly />
-
-            <fieldset>
-               <div class="grid">
-                  <div class="grid__item xs-12 md-6">
-                     <label for="contact_name">
-                        <span class="required-label">Contact Name:</span>
-                        <input type="text" id="contact_name" name="contact_name" maxlength="200" required>
-                     </label>
-                  </div>
-                  <div class="grid__item xs-12 md-6">
-                     <label for="email">
-                        <span class="required-label">Email:</span>
-                        <input type="email" id="email" name="email" maxlength="200" required>
-                     </label>
-                  </div>
-                  <div class="grid__item xs-12 md-6">
-                     <label for="submission_type">
-                        <span class="required-label">Submission Type:</span>
-                        <select id="submission_type" name="submission_type" required>
-                           <option value="">Select...</option>
-                           <option value="Band">Band</option>
-                           <option value="DJ">DJ</option>
-                           <option value="Talent">Talent</option>
-                        </select>
-                     </label>
-                  </div>
-               </div>
-            </fieldset>
-
-            <div id="submission-form__sections">
-            </div>
-         </form>
-
-         <div id="placeholder-submission-form" style="display: none;" aria-hidden="true">
-            <form name="submissions" method="POST" netlify-honeypot="message" data-netlify="true" hidden>
-               <input type="hidden" name="subject" value="Convergence 26 Band/DJ/Talent Submission" readonly required>
-
-               <input type="text" name="contact_name" placeholder="Contact Name" readonly required>
-
-               <textarea name="message"></textarea>
-
-               <input type="email" name="email" placeholder="Email" required>
-
-               <input type="text" name="submission_type" placeholder="Submission Type" required>
-
-               <input type="text" name="name" placeholder="Name" required>
-
-               <input type="text" name="participated_past_convergence" placeholder="Have you participated in past Convergence(s)?" required>
-
-               <textarea name="past_convergence" placeholder="Which Convergence(s) did you participate in?"></textarea>
-
-               <textarea name="recent_shows" placeholder="List of your most recent shows"></textarea>
-
-               <textarea name="event_nights" placeholder="Event nights you are associated with"></textarea>
-
-               <textarea name="bio" required placeholder="Bio"></textarea>
-
-               <input type="text" name="website" placeholder="Website">
-
-               <input type="text" name="facebook" placeholder="Facebook">
-
-               <input type="text" name="instagram" placeholder="Instagram">
-
-               <input type="text" name="bandcamp" placeholder="Bandcamp">
-
-               <input type="text" name="soundcloud" placeholder="Soundcloud">
-
-               <input type="text" name="youtube" placeholder="YouTube">
-
-               <input type="text" name="mixcloud" placeholder="Mixcloud">
-
-               <input type="text" name="other_link" placeholder="Other Link">
-            </form>
-         </div>
-      </section>
-   </div>
+         <p>
+            We currently are no longer accepting submissions for bands and DJ. We received over 120 submissions, so bare with us as we work to schedule a great line-up. Thanks for your interest!
+         </p>
+      </div>
+   </article>
 {% endblock %}

@@ -1,0 +1,80 @@
+form {
+	margin: 0 0 1.25rem;
+}
+
+input,
+select,
+textarea {
+   z-index: 2;
+   position: relative;
+}
+
+input:not([type='checkbox']):not([type='radio']):not([type='hidden']),
+select,
+textarea {
+   box-sizing: border-box;
+	width: 100%;
+	height: 3.3375rem;
+	padding: 1rem;
+	border: 1px solid $secondary-color;
+	font-size: 1rem;
+	color: $black;
+	background-color: $white;
+	box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+   margin: 0 0 1.5rem;
+   display: block;
+
+	&:focus {
+		outline: none;
+	}
+
+   &:invalid {
+      border-color: $danger-color;
+   }
+}
+
+input:not([type='checkbox']):not([type='radio']):not([type='hidden']),
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+textarea {
+	height: auto;
+	min-height: 100px;
+	max-width: 100%;
+	resize: vertical;
+}
+
+select {
+	outline: 0;
+
+	&[size],
+	&[multiple] {
+		height: auto;
+	}
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+[type="checkbox"],
+[type="radio"] {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+fieldset {
+   padding: ($padding-vertical * 2) $padding-horizontal;
+   margin: 0 0 ($padding-vertical * 2);
+}
+
+.required-label {
+   &:after {
+      content: "*";
+      color: $danger-color;
+      margin-left: 6px;
+      display: inline-block;
+   }
+}

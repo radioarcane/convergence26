@@ -1,0 +1,8 @@
+
+.border {
+   border: 1px solid transparent;
+
+   &--light {
+      border-color: $white-smoke;
+   }
+}

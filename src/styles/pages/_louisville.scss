@@ -1,0 +1,57 @@
+.attractions-container {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: stretch;
+   align-content: flex-start;
+   justify-content: flex-start;
+
+   @include breakpoint($screen-l-min) {
+      flex-wrap: nowrap;
+   }
+}
+
+.attractions--1 {
+   margin-bottom: 0;
+   width: 100%;
+
+   @include breakpoint($screen-m-min) {
+      width: 45%;
+   }
+
+   @include breakpoint($screen-l-min) {
+      width: 33.3333%;
+   }
+}
+
+.attractions--2 {
+   margin-bottom: 0;
+   width: 100%;
+
+   @include breakpoint($screen-m-min) {
+      width: 45%;
+   }
+
+   @include breakpoint($screen-l-min) {
+      width: 33.3333%;
+   }
+}
+
+.attractions--3 {
+   width: 100%;
+
+   @include breakpoint($screen-m-min) {
+      li {
+         float: left;
+         width: 50%;
+      }
+   }
+
+   @include breakpoint($screen-l-min) {
+      width: 33.3333%;
+
+      li {
+         float: none;
+         width: 100%;
+      }
+   }
+}

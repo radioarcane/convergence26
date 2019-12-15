@@ -1,43 +1,34 @@
 {% set metaPageTitle = pageTitle if pageTitle else siteName %}
 
-<title>{{ metaPageTitle | truncate(70, true, "...") }}</title>
+<title>{{ metaPageTitle }}</title>
 
 {% if canonical %}
    <link rel="canonical" href="{{ canonical }}">
 {% endif %}
 
 {% if metaDescription %}
-   <meta name="description" content="{{ metaDescription | truncate(150, true, '...') }}">
+   <meta name="description" content="{{ metaDescription | truncate(252, true, '...') }}">
+{% endif %}
+
+{% if metaKeywords %}
+   <meta name="keywords" content="{{ metaKeywords }}">
 {% endif %}
 
 {% if canonical %}
    <meta property="og:site_name" content="{{ siteName }}">
-   <meta property="og:title" content="{{ metaPageTitle | truncate(70, true, '...') }}">
+   <meta property="og:title" content="{{ metaPageTitle }}">
    <meta property="og:locale" content="en_US">
 
    {% if metaDescription %}
-      <meta name="og:description" content="{{ metaDescription | truncate(150, true, '...') }}">
+      <meta name="og:description" content="{{ metaDescription | truncate(252, true, '...') }}">
+   {% endif %}
+
+   {% if metaImage %}
+      <meta property="og:image" content="{{ domain + metaImage }}">
+   {% else %}
+      <meta property="og:image" content="{{ domain }}/images/convergence-26-louisville-banner.jpg">
    {% endif %}
 
    <meta property="og:type" content="website">
    <meta property="og:url" content="{{ canonical }}">
-   <meta property="og:image" content="{{ domain }}/img/convergence-26-louisville-ky.jpg">
-
-   <meta name="twitter:title" content="{{ metaPageTitle | truncate(70, true, '...') }}">
-
-   {% if metaDescription %}
-      <meta name="twitter:description" content="{{ metaDescription | truncate(150, true, '...') }}">
-   {% endif %}
-
-   <meta name="twitter:image" content="{{ domain }}/img/convergence-26-louisville-ky.jpg">
-
-   <meta name="twitter:card" content="summary_large_image">
 {% endif %}
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-<meta name="msapplication-TileColor" content="#603cba">
-<meta name="theme-color" content="#ffffff">

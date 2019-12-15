@@ -13,6 +13,8 @@ const webpack = require('webpack');
 const colors = require('colors/safe');
 const devMode = process.env.NODE_ENV !== 'production';
 
+const distFolder = 'public/js';
+
 const config = {
    context: path.resolve(__dirname, '../src'),
    stats: {
@@ -28,8 +30,8 @@ const config = {
    mode: devMode ? 'development' : 'production',
    output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, '../public/js/'),
-      publicPath: path.resolve(__dirname, '../public/js/'),
+      path: path.resolve(__dirname, `../${ distFolder }/`),
+      publicPath: path.resolve(__dirname, `../${ distFolder }/`),
    },
    devtool: devMode ? 'inline-source-map' : false,
    plugins: [

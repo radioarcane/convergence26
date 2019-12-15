@@ -1,0 +1,92 @@
+{% set pageTitle = 'About Louisville | Convergence 26 - Louisville, KY' %}
+{% set hasHero = true %}
+
+{% extends '_layouts/default.njk' %}
+
+{% block hero %}
+   {% include "_components/hero-louisville.njk" %}
+{% endblock %}
+
+{% block main %}
+   <article class="block">
+      <div class="container">
+         <h1 class="title">Travel</h1>
+
+         <p>Travel to Louisville, the birthplace of Hunter S. Thompson, Muhammad Ali, the song, “Happy Birthday To You,” and <a href="https://www.thefuneralparty.com" target="_blank">Funeral Party Records</a>, is a generally painless endeavor, as we’re home to an international* airport that serves all major carriers. It’s also at the intersections of interstate highways 64, 65, and 71, for those who prefer the scenic route. (And indeed, the scenery is great.)</p>
+
+         <ul>
+            <li><a href="https://www.flylouisville.com" target="_blank">https://www.flylouisville.com</a></li>
+            <li><a href="https://www.gotolouisville.com/travel-tools" target="_blank">https://www.gotolouisville.com/travel-tools</a></li>
+         </ul>
+
+         <p><small><em>* [Admittedly, the “international” designation is limited to its role as a UPS hub, but it’s still technically correct, which is the very best kind of correct. Regardless, domestic flights into Louisville are typically a trouble-free endeavor, and the airport provides the usual assortment of ground transportation options.]</em></small></p>
+      </div>
+   </article>
+
+   <article class="block">
+      <div class="container">
+         <h2 class="title">Attractions</h2>
+
+         <p>Despite Louisville’s size, a great many points of interest are located within ten minutes (2-5 miles) of the hotel.</p>
+
+         <p>Further, unlike some other metropolitan regions with populations exceeding a million, Louisville can typically be navigated quickly from end to end.</p>
+
+         <p>Whether you’ll be visiting an art museum, wandering any of our myriad award-winning parks, doing some antiquing, touring a distillery (bourbon or brandy–pick your poison), snuggling inside a cat café, eating until you’ve reached maximum capacity, seeking out historical facts behind our local ghosts, spending quality time with the skeletons of a couple of Catholic saints, or even, say, zip-lining inside a giant cavern, it’s all within easy reach.</p>
+
+         <p>There’ll be plenty of structured activities organized by the Convergence committee and others during the three official days, but there’s really quite a lot to do here, so you might want to consider extending your stay.</p>
+
+         <div class="attractions-container">
+            <ul class="attractions attractions--1">
+               {% for item in attractions %}
+                  {% if loop.index < 13 %}
+                  <li>
+                     <a href="{{ item.url }}" target="_blank">
+                        {{ item.name }}
+                     </a>
+                  </li>
+                  {% endif %}
+               {% endfor %}
+            </ul>
+
+            <ul class="attractions attractions--2">
+               {% for item in attractions %}
+                  {% if loop.index > 12  %}
+                     {% if loop.index < 24  %}
+                        <li>
+                           <a href="{{ item.url }}" target="_blank">
+                              {{ item.name }}
+                           </a>
+                        </li>
+                     {% endif %}
+                  {% endif %}
+               {% endfor %}
+            </ul>
+
+            <ul class="attractions attractions--3">
+               {% for item in attractions %}
+                  {% if loop.index > 23  %}
+                        <li>
+                           <a href="{{ item.url }}" target="_blank">
+                              {{ item.name }}
+                           </a>
+                        </li>
+                  {% endif %}
+               {% endfor %}
+            </ul>
+         </div>
+      </div>
+   </article>
+
+   <article class="block">
+      <div class="container">
+         <h2 class="title">Live Deliciously.</h2>
+
+         <p>Louisville is a foodie paradise, offering a wide variety of fare to please omnivores and herbivores alike. Our restaurants and dessert shops are ready to handle your dietary needs.</p>
+
+         <ul>
+            <li><a href="https://www.gotolouisville.com/restaurants" target="_blank">https://www.gotolouisville.com/restaurants</a></li>
+            <li><a href="https://www.findmeglutenfree.com/us/ky/louisville" target="_blank">https://www.findmeglutenfree.com/us/ky/louisville</a></li>
+         </ul>
+      </div>
+   </article>
+{% endblock %}

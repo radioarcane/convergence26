@@ -1,306 +1,77 @@
-{% set canonical = domain %}
 {% set pageTitle = 'Convergence 26 - Louisville, KY' %}
+{% set hasHero = true %}
 
 {% extends '_layouts/default.njk' %}
 
+{% block hero %}
+   {% include "_components/hero-main.njk" %}
+{% endblock %}
+
 {% block main %}
-   <div id="quote" class="block">
-      <blockquote>
-         <p><q>One of God's own prototypes&ndash;a high-powered mutant of some kind never even considered for mass production.<br> Too weird to live, and too rare to die.</q></p>
+   <div class="container">
+      <article class="block">
+         <p class="drop-cap">Nestled in the dead center of the states that comprise the US’s Midwest, East, and South sits Kentucky, and the best features of each of these regions are well-represented in Louisville. Its burgeoning art, music, theater, and culinary cultures, combined with its rich history and natural splendor, themselves, have much to offer, and, oh… we have a Goth scene, too.</p>
 
-         <footer>
-            &mdash; Hunter S. Thompson, Louisville native
-         </footer>
-      </blockquote>
-   </div>
+         <p>These Victorian-era garden cemeteries aren’t just going to appreciate themselves, after all.</p>
 
-   <article id="louisville" class="block">
-      <div class="container">
-         <section>
-            <p>Nestled in the dead center of the states that comprise the US&rsquo;s Midwest, East, and South sits Kentucky, and the best features of each of these regions are well-represented in Louisville. Its burgeoning art, music, theater, and culinary cultures, combined with its rich history and natural splendor, themselves, have much to offer, and, oh&hellip; we have a Goth scene, too.</p>
+         <p><a href="https://www.radio-arcane.com" target="_blank">Radio Arcane</a>, <a href="http://www.art-sanctuary.org">Art Sanctuary</a>, and really, all of Louisville are delighted that our fair city has been chosen for Convergence 26. We have much to share with you.</p>
+      </article>
 
-            <p>These Victorian-era garden cemeteries aren&rsquo;t just going to appreciate themselves, after all.</p>
+      <section id="news" class="block">
+         <h2 class="title">News & Annoucements</h2>
 
-            <p>Louisville&rsquo;s Goth scene is fortunate enough to have a physical home of its own that isn&rsquo;t subject to the typical whims of a commercial entity. <a href="http://www.art-sanctuary.org" target="_blank">Art Sanctuary</a>&ndash;a 501(c)(3) non-profit&ndash;is a community-oriented arts collective supporting local visual, literary and performing arts. A subset of this, <a href="https://www.radio-arcane.com" target="_blank">Radio Arcane</a>, is the project of Art Sanctuary that gathers a collective of DJs and performers that regularly hosts events, live music, and dark arts entertainment—curators for all things dark and beautiful within our fair city.</p>
+         <div class="pb-2">
+            <article class="card card--news">
+               <div class="card__body">
+                  <h5 class="card__title">Submissions for Bands and DJs Closed</h5>
+                  <time class="card__date" datetime="2019-11-10">Nov. 10, 2019</time>
 
-            <div class="grid grid--collapse">
-               <div class="grid__item">
-                  <ul>
-                     <li><a href="http://www.art-sanctuary.org" target="_blank">http://www.art-sanctuary.org</a></li>
-                     <li><a href="https://www.instagram.com/art.sanctuary" target="_blank">https://www.instagram.com/art.sanctuary</a></li>
-                     <li><a href="https://www.facebook.com/Art-Sanctuary-122260903695" target="_blank">https://www.facebook.com/Art-Sanctuary-122260903695</a></li>
-                  </ul>
+                  <div class="card__text">
+                     <p>We’ve been almost overwhelmed by the sheer volume of great bands and DJs who’ve formally expressed their interest in performing at next year’s Convergence, and now it’s time to announce that we are no longer accepting submissions.</p>
+                  </div>
                </div>
-               <div class="grid__item">
-                  <ul>
-                     <li><a href="https://www.radio-arcane.com" target="_blank">https://www.radio-arcane.com</a></li>
-                     <li><a href="https://www.instagram.com/radio_arcane" target="_blank">https://www.instagram.com/radio_arcane</a></li>
-                     <li><a href="https://www.facebook.com/RadioArcaneEvents" target="_blank">https://www.facebook.com/RadioArcaneEvents</a></li>
-                  </ul>
+            </article>
+
+            <article class="card card--news">
+               <div class="card__body">
+                  <h5 class="card__title">Cat vs Bat Podcast</h5>
+                  <time class="card__date" datetime="2019-10-30">Oct. 30, 2019</time>
+
+                  <div class="card__text">
+                     <p>Committee members Tarik Dozier, Lisa Frye, and Edwin Alberto have made an appearance on the <a href="https://www.facebook.com/catvsbatpodcast" target="_blank">Cat vs Bat Podcast</a>, on which they discuss the delights of Louisville, Radio Arcane, and what we have in store for C26 with DJ Mistress McCutchan. <a href="https://catvsbat.podbean.com/e/episode-40-the-louisville-scene-convergence-26" target="_blank">Give it a listen</a>.</p>
+                  </div>
                </div>
-            </div>
-         </section>
+            </article>
 
-         <section>
-            <p>Radio Arcane wants to bring Convergence to Louisville, not only to delight and entertain you, but also to share with you a bit of ourselves. Our primary mission is to help this Goth community to thrive, not merely survive, and we do this, wholeheartedly, as a labor of love. This culture of ours reflects who we are, individually and collectively, and we want to celebrate that with all who would gather with us. Those who flock to Convergence are our people, and as such, we offer you our hospitality. We offer you our home.</p>
-         </section>
-      </div>
-   </article>
+            <article class="card card--news">
+               <div class="card__body">
+                  <h5 class="card__title">Official Hotel Annoucement</h5>
+                  <time class="card__date" datetime="2019-09-15">Sept. 15, 2019</time>
 
-
-   <article id="venue" class="block">
-      <div class="container">
-         <h2 class="title">The Venue</h2>
-
-         <p>Art Sanctuary is also the eponym for a 26,000 sq. ft. physical structure, roughly half of which is dedicated to an event facility (9500 sq. ft.; occupancy: 597) and gallery space (3200 sq. ft.; occupancy: 98), all of which incorporates such features as a large, fully equipped stage, full bar, lobby area, comfortable seating, and single-story accessibility.</p>
-
-         <figure id="venue-layout">
-            <picture>
-               <source srcset="/img/art-sanctuary-layout.webp" type="image/webp">
-               <source srcset="/img/art-sanctuary-layout.jpg" type="image/jpeg">
-               <img src="/img/art-sanctuary-layout.jpg" alt="Art Sanctuary Building Layout">
-            </picture>
-         </figure>
-
-         <p>Within Art Sanctuary (which is licensed as an 18+, 4am venue), our evening Convergence events can feature what everyone has come to expect—bands, DJs, fashion show, etc.&ndash;but, concurrently, it can also accommodate an art show and a wide array of vendors in fully separate spaces, thus making all of this much more convenient for attendees while also curbing expenses. That physical separation also makes the gallery area a somewhat quieter space, with seating for those who&rsquo;d prefer to relax and enjoy conversation.</p>
-
-         <figure id="venue-building">
-            <picture>
-               <source srcset="/img/art-sanctuary-building.webp" type="image/webp">
-               <source srcset="/img/art-sanctuary-building.jpg" type="image/jpeg">
-               <img src="/img/art-sanctuary-building.jpg" alt="Art Sanctuary Building">
-            </picture>
-         </figure>
-
-         <ul>
-            <li><a href="http://www.art-sanctuary.org/building-information" target="_blank">http://www.art-sanctuary.org/building-information</a></li>
-            <li><a href="http://www.art-sanctuary.org/event-space-rental" target="_blank">http://www.art-sanctuary.org/event-space-rental</a></li>
-         </ul>
-
-         <p>Further, the facility will also be made available during the day, and thus could potentially host community-led workshops of various types. We fully welcome volunteers who&rsquo;d like to lead such activities, and invite you to contact us with your feedback on what you’d like to see and what you have to offer.</p>
-      </div>
-   </article>
-
-   <article id="travel" class="block">
-      <div class="container">
-         <h2 class="title">Travel</h2>
-
-         <p>Travel to Louisville, the birthplace of Hunter S. Thompson, Muhammad Ali, the song, &ldquo;Happy Birthday To You,&rdquo; and <a href="https://www.thefuneralparty.com" target="_blank">Funeral Party Records</a>, is a generally painless endeavor, as we’re home to an international* airport that serves all major carriers. It’s also at the intersections of interstate highways 64, 65, and 71, for those who prefer the scenic route. (And indeed, the scenery is great.)</p>
-
-         <ul>
-            <li><a href="https://www.flylouisville.com" target="_blank">https://www.flylouisville.com</a></li>
-            <li><a href="https://www.gotolouisville.com/travel-tools" target="_blank">https://www.gotolouisville.com/travel-tools</a></li>
-         </ul>
-
-         <p><small><em>* [Admittedly, the &ldquo;international&rdquo; designation is limited to its role as a UPS hub, but it&rsquo;s still technically correct, which is the very best kind of correct. Regardless, domestic flights into Louisville are typically a trouble-free endeavor, and the airport provides the usual assortment of ground transportation options.]</em></small></p>
-      </div>
-   </article>
-
-   <article id="accommodations" class="block">
-      <div class="container">
-         <h2 class="title">Accommodations</h2>
-
-         <p>We are currently considering a number of different hotels, all of which would be quite comfortable and inviting to the attendees of Convergence, and all of which should be within a ten-minute drive of Art Sanctuary (2.5-5 miles).</p>
-      </div>
-   </article>
-
-   <article id="attractions" class="block">
-      <div class="container">
-         <h2 class="title">Attractions</h2>
-
-         <p>Despite Louisville&rsquo;s size, a great many points of interest are located within ten minutes (2-5 miles) of the hotel.</p>
-
-         <p>Further, unlike some other metropolitan regions with populations exceeding a million, Louisville can typically be navigated quickly from end to end.</p>
-
-         <p>Whether you&rsquo;ll be visiting an art museum, wandering any of our myriad award-winning parks, doing some antiquing, touring a distillery (bourbon or brandy&ndash;pick your poison), snuggling inside a cat caf&eacute;, eating until you&rsquo;ve reached maximum capacity, seeking out historical facts behind our local ghosts, spending quality time with the skeletons of a couple of Catholic saints, or even, say, zip-lining inside a giant cavern, it&rsquo;s all within easy reach.</p>
-
-         <p>There&rsquo;ll be plenty of structured activities organized by the Convergence committee and others during the three official days, but there&rsquo;s really quite a lot to do here, so you might want to consider extending your stay.</p>
-
-         <div class="attractions-container">
-            <ul class="attractions attractions--1">
-               {% for item in attractions %}
-                  {% if loop.index < 13 %}
-                  <li>
-                     <a href="{{ item.url }}" target="_blank">
-                        {{ item.name }}
-                     </a>
-                  </li>
-                  {% endif %}
-               {% endfor %}
-            </ul>
-
-            <ul class="attractions attractions--2">
-               {% for item in attractions %}
-                  {% if loop.index > 12  %}
-                     {% if loop.index < 24  %}
-                        <li>
-                           <a href="{{ item.url }}" target="_blank">
-                              {{ item.name }}
-                           </a>
-                        </li>
-                     {% endif %}
-                  {% endif %}
-               {% endfor %}
-            </ul>
-
-            <ul class="attractions attractions--3">
-               {% for item in attractions %}
-                  {% if loop.index > 23  %}
-                        <li>
-                           <a href="{{ item.url }}" target="_blank">
-                              {{ item.name }}
-                           </a>
-                        </li>
-                  {% endif %}
-               {% endfor %}
-            </ul>
+                  <div class="card__text">
+                     <p>We’re pleased to announce the official hotel for 2020—the gorgeous, spacious, well-appointed, river-adjacent <a href="https://www.facebook.com/TheGaltHouseHotel" target="_blank">Galt House Hotel</a>. For details and booking information, visit our <a href="/hotel">Hotel page</a>.</p>
+                  </div>
+               </div>
+            </article>
          </div>
-      </div>
-   </article>
 
-   <article id="food" class="block">
-      <div class="container">
-         <h2 class="title">Live Deliciously.</h2>
+         <aside>
+            <h6 class="text-center">
+               Follow Convergence 26 on Social Media to keep up on the latest news and announcements
+            </h6>
 
-         <p>Louisville is a foodie paradise, offering a wide variety of fare to please omnivores and herbivores alike. Our restaurants and dessert shops are ready to handle your dietary needs.</p>
+            {% include "_partials/social-icons.njk" %}
+         </aside>
+      </section>
 
-         <ul>
-            <li><a href="https://www.gotolouisville.com/restaurants" target="_blank">https://www.gotolouisville.com/restaurants</a></li>
-            <li><a href="https://www.findmeglutenfree.com/us/ky/louisville" target="_blank">https://www.findmeglutenfree.com/us/ky/louisville</a></li>
-         </ul>
-      </div>
-   </article>
+      <article id="convergence" class="block">
+         <h3 class="title">What is Convergence?</h3>
 
-   <div id="about" class="block">
-      <div class="container">
-         <h2 class="title">About Us</h2>
+         <p>In 1994, the geographically disparate denizens of the Usenet group, <a href="https://www.facebook.com/groups/alt.gothic" target="_blank">alt.gothic</a>, decided that at long last, it was time to meet IRL. Collectively, they decided that Chicago was just the right place, and lo, the first Convergence was born.</p>
 
-         <p>Our committee is comprised of a number of the members of Radio Arcane, in conjunction with the illustrious Scary Lady Sarah. Between us, we have a wide range of skills, experience in presenting large live events, generally, and practical involvement in the production of multiple incarnations of Convergence, specifically. We also have a support system of wonderful, industrious people to aid us in our endeavors.</p>
+         <p>In the twenty-five years since, it has become an annual party—a family reunion of sorts—and has grown to include members of the myriad Gothic/Industrial online and social media groups it spawned, as well as the broader worldwide Goth community—“friends of friends,” as it were. Hundreds of net.goths from around the globe descend upon a single city for a weekend of socializing, musical events, and various forms of indulgence.</p>
 
-         <article class="bio">
-            <h3 class="bio__title"><strong>Tarik Dozier</strong> (Osiris Ani) &ndash; Regional Warlord, Logistical Reality Wrangler</h3>
-
-            <figure class="bio__img">
-               <picture>
-                  <source srcset="/img/tarik-dozier.webp" type="image/webp">
-                  <source srcset="/img/tarik-dozier.jpg" type="image/jpeg">
-                  <img src="/img/tarik-dozier.jpg" alt="Tarik Dozier (Osiris Ani)">
-               </picture>
-            </figure>
-
-            <div class="bio__content">
-               <p>Osiris first made himself known to the denizens of alt.gothic at some point in the mid-&lsquo;90s, and originally hails from Chicago, but landed in Kentucky sixteen years ago. A founding member of Radio Arcane, he&rsquo;s DJed Goth nights and festivals in Kentucky, Indiana, and Illinois, and now regularly spins at our monthly event at Art Sanctuary. He&rsquo;s attended C5, C20, C24, and C25, and is the one who&rsquo;s been responsible for roping us into this particular endeavor, driving us all to the brink of madness with his boundless enthusiasm for Convergence. It&rsquo;s fine; madness is our thing.</p>
-
-               <p>Incidentally, it was that very same Convergence-induced fervor&ndash;and the earnest desire to maintain the sort of euphoria that can only come from a happy reunion with the net.goth family&ndash;that compelled Tarik to create the Facebook version of alt.gothic at the tail end of C20. He continues to admin that group, along with Scary Lady Sarah and Carrie Monster, and diligently keeps the gawkers and trolls at bay.</p>
-
-               <p>He spends most of the rest of his time as an IT professional or making art, which basically amounts to an attempt to bend electrons and photons to his will, respectively.</p>
-            </div>
-         </article>
-
-         <article class="bio">
-            <h3 class="bio__title"><strong>Kim Bell</strong> (DJ Kaleidoscope)</h3>
-
-            <figure class="bio__img">
-               <picture>
-                  <source srcset="/img/kim-bell.webp" type="image/webp">
-                  <source srcset="/img/kim-bell.jpg" type="image/jpeg">
-                  <img src="/img/kim-bell.jpg" alt="Kim Bell (DJ Kaleidoscope)">
-               </picture>
-            </figure>
-
-
-            <div class="bio__content">
-               <p>An established salon/business owner, Kim has also been dedicated to a lifetime of promoting, DJing, probing, and writing a kaleidoscopic grayscale of alternative, underground, and experimental music. She was one of the first DJs in Louisville to bring the dark, Goth/EBM sounds to local dance clubs, and has helped add to the local playlists of established, alternative clubs/ nights&ndash;Discovery, Sparks, City Lights, Tewligans, Main Street Lounge, Red Barn, Headliners Music Hall, Za&rsquo;s, Fusion, Confusion, Art Sanctuary, Seidenfaden&rsquo;s and more.</p>
-
-               <p>Further, she DJed at Convergence 13, and has also graced music festivals around the continent, including Dragon Con (Atlanta), Kinetic (Chicago), and Kinetic (Montreal, Canada), as well as guest DJing events such as Das Bunker - Los Angeles, CA; Nashville, TN; Indianapolis, IN; Bloomington, IN; Chicago, IL; Dayton, OH; Cincinnati, OH; Columbus, OH; Atlanta, GA; Portland, OR; Anchorage, AK; Fairbanks, AK; St. Louis, MO; Springfield, MO; Fayetteville, AR; Murfreesboro, TN; and more.</p>
-
-               <p>If she&rsquo;s not in the DJ booth, you&rsquo;ll find her happily dancing the night away.</p>
-            </div>
-         </article>
-
-         <article class="bio">
-            <h3 class="bio__title"><strong>Lisa Frye</strong> &ndash; The Benefactor</h3>
-
-            <figure class="bio__img">
-               <picture>
-                  <source srcset="/img/lisa-frye.webp" type="image/webp">
-                  <source srcset="/img/lisa-frye.jpg" type="image/jpeg">
-                  <img src="/img/lisa-frye.jpg" alt="Lisa Frye">
-               </picture>
-            </figure>
-
-            <div class="bio__content">
-               <p>Lisa has always been an artist. Whether the medium is painting, photography, design, event planning or the culinary arts, she loves to create. As a child, her aunt once said that if she were trapped in a room with no doors or windows, she would manage a way to draw herself to freedom.</p>
-
-               <p>After earning her BFA from the University of Louisville, she found that there were many local talented artists that had nowhere to show their works. Her response was to create the non-profit Art Sanctuary organization.</p>
-
-               <p>As Art Sanctuary&rsquo;s co-founder and President, she hopes to continue to create a safe place for artists of all stripes to have a place to commune and create. As part of her mission to support artists of all kinds, she also manages and produces local performing arts group, Va Va Vixens, and is one of the founding members of Radio Arcane.</p>
-            </div>
-         </article>
-
-         <article class="bio">
-            <h3 class="bio__title"><strong>Matt Kokas</strong> (DJ Sorrow-Vomit)</h3>
-
-            <figure class="bio__img">
-               <picture>
-                  <source srcset="/img/matt-kokas.webp" type="image/webp">
-                  <source srcset="/img/matt-kokas.jpg" type="image/jpeg">
-                  <img src="/img/matt-kokas.jpg" alt="Matt Kokas (DJ Sorrow-Vomit)">
-               </picture>
-            </figure>
-
-            <div class="bio__content">
-               <p>Fun facts about Matt:</p>
-
-               <ul>
-                  <li>Louisville-based DJ since 2004</li>
-                  <li>Web developer/programmer</li>
-                  <li>Past and present Goth / post-punk / coldwave / synth fanatic</li>
-                  <li>Meticulous collector and cataloger</li>
-                  <li>Gothic Rain Man</li>
-                  <li>Has attended C12</li>
-               </ul>
-            </div>
-         </article>
-
-         <article class="bio">
-            <h3 class="bio__title"><strong>Edwin Ramirez</strong> (AndrOspore)</h3>
-
-            <figure class="bio__img">
-               <picture>
-                  <source srcset="/img/edwin-ramirez.webp" type="image/webp">
-                  <source srcset="/img/edwin-ramirez.jpg" type="image/jpeg">
-                  <img src="/img/edwin-ramirez.jpg" alt="Edwin Ramirez (AndrOspore)">
-               </picture>
-            </figure>
-
-            <div class="bio__content">
-               <p>A bipedal colonial lifeform hailing from the unexplored trenches of the deepest seas, Edwin brings a message to the surface world&ndash;save our planet and dance while you do it. He spends his days talking to dogs (professionally) and is an audio/visual artist. Edwin has been involved in Louisville&rsquo;s Goth scene since 2007 (formerly DJ Sodom &ndash; RIP) and helped organize and play at various local Louisville club nights including Confuzion, Paradox, Deafixion, Pandemonium, Visceral, and now Radio Arcane. Edwin has guest DJed at other midwest club nights including Nashville, TN, Columbus, OH, Cincinnati, OH, and New Albany, IN, and attended C14.</p>
-
-               <p>Currently he resides in his hobbit hole with his husband, Robert, and their two schnauzers.</p>
-            </div>
-         </article>
-
-         <article class="bio">
-            <h3 class="bio__title"><strong>Scary Lady Sarah</strong> &ndash; Professor Emeritus</h3>
-
-
-            <figure class="bio__img">
-               <picture>
-                  <source srcset="/img/scary-lady-sarah.webp" type="image/webp">
-                  <source srcset="/img/scary-lady-sarah.jpg" type="image/jpeg">
-                  <img src="/img/scary-lady-sarah.jpg" alt="Scary Lady Sarah">
-               </picture>
-            </figure>
-
-            <div class="bio__content">
-               <p>A native Chicagoan (with a 7-year stretch of splitting time between Chicago & Berlin) Scary Lady Sarah has been a professional working club DJ since 1988. Her bi-monthly club night Nocturna is now in its 31st year and going strong. She has been a featured DJ at some of the most prestigious dark music/Goth events in the world, including Convergence, Wave-Gotik-Treffen, Whitby Gothic Weekend, and all across clubs in North America and Europe.</p>
-
-               <p>Aside from being a DJ, Scary Lady Sarah has presented hundreds of live bands in Chicago, under her American Gothic Productions banner, along with scores of other club nights and parties. Her love of music entered a new realm when her husband, William Faith, taught her to play guitar and they formed The Bellwether Syndicate in 2012.</p>
-
-               <p>SLS was on the committee for C1 and co-chaired C10 and C20. She has attended C1, C4, C5, C6, C7, C8, C9, C10, C12, C19, C20, C21, C23, and C24. She was a DJ at C1, C5, C6, the “C7 Rescue,” C8, C9, C10, C12, C19, C20, C21, and C23. Her band, The Bellwether Syndicate, performed at C19, C21, and C24. She has been an unofficial consultant for several past C* committees, as well. Her commitment to and fondness for the Convergence concept and community goes all the way back to the beginning.</p>
-            </div>
-         </article>
-      </div>
+         <p>Now in its twenty-sixth year, Louisville, Kentucky’s winning bid means that we get to bring you something altogether new, and yet still, entirely familiar.</p>
+      </article>
    </div>
 {% endblock %}

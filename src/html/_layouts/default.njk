@@ -1,38 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!doctype html>
+<html lang="{{ language }}" class="no-js no-webp">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
 
-   {% block meta %}
-		{% include "_partials/meta.njk" %}
-	{% endblock %}
+      {% block meta %}
+         {% include "_partials/meta.njk" %}
+      {% endblock %}
 
-   {% include "_partials/favicons.njk" %}
+      {% include "_partials/favicons.njk" %}
 
-   {% block styles %}
-		{% include "_partials/styles.njk" %}
-	{% endblock %}
+      {% block styles %}
+         {% include "_partials/styles.njk" %}
+      {% endblock %}
 
-   {% block custom_styles %}
-	{% endblock %}
-</head>
-<body>
-   {% include "_components/header.njk" %}
+      {% block custom_styles %}{% endblock %}
+   </head>
+   <body>
+      <div id="page-content">
+         {% include "_components/header.njk" %}
 
-   <main class="main-content" role="main">
-      {% block main %}
-   	{% endblock %}
-   </main>
+         {% block hero %}
+         {% endblock %}
 
-   {% include "_components/footer.njk" %}
+         <main class="main-content" role="main">
+            {% block main %}
+            {% endblock %}
+         </main>
 
-	{% block footer_scripts %}
-		{% include "_partials/footer-scripts.njk" %}
-	{% endblock %}
+         {% include "_components/footer.njk" %}
 
-   {% block custom_scripts %}
-	{% endblock %}
-</body>
+         {% block footer_scripts %}
+            {% include "_partials/footer-scripts.njk" %}
+         {% endblock %}
+
+         {% block custom_scripts %}{% endblock %}
+      </div>
+   </body>
 </html>

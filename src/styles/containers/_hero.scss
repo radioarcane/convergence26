@@ -1,0 +1,302 @@
+.hero {
+   position: relative;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: $white;
+   overflow: hidden;
+   z-index: 3;
+
+   @include mediaBetween(0, $screen-l-min) {
+      height: 100vw;
+
+      .no-webp & {
+         background-image: url('/images/louisville-skyline-600x1200.jpg');
+      }
+
+      .webp & {
+         background-image: url('/images/louisville-skyline-600x1200.webp');
+      }
+   }
+
+   @include mediaBetween($screen-s-min, $screen-l-min) {
+      height: 75vw;
+
+      .no-webp & {
+         background-image: url('/images/louisville-skyline-600x450.jpg');
+      }
+
+      .webp & {
+         background-image: url('/images/louisville-skyline-600x450.webp');
+      }
+   }
+
+   @include breakpoint($screen-l-min) {
+      height: 56.25vw;
+
+      .no-webp & {
+         background-image: url('/images/louisville-skyline-2000x1125.jpg');
+      }
+
+      .webp & {
+         background-image: url('/images/louisville-skyline-2000x1125.webp');
+      }
+   }
+
+   &__container {
+      height: 100%;
+      padding: 0 $padding-horizontal;
+   }
+
+   &__content {
+
+   }
+}
+
+.louisivlle-hero {
+   text-shadow: 2px 2px hex-to-rgba($black, 0.4);
+   text-align: center;
+   position: absolute;
+   left: 0;
+   top: 110px;
+   z-index: 8;
+   width: 100%;
+   padding: 0 ($gutter-width/2);
+   top: 50vw;
+   transform: translateY(-50%);
+
+   @include breakpoint(500px) {
+      font-size: 20px;
+      line-height: 1.75;
+   }
+
+   @include breakpoint(600px) {
+      font-size: 22px;
+      top: 45vw;
+   }
+
+   @include breakpoint($screen-m-min) {
+      padding-right: $gutter-width;
+      padding-left: $gutter-width;
+      font-size: 28px;
+   }
+
+   @include breakpoint($screen-l-min) {
+      top: 70%;
+      transform: translateY(-70%);
+   }
+
+   @include breakpoint($screen-xxxl-min) {
+      top: 40%;
+      transform: translateY(-40%);
+      font-size: 40px;
+   }
+
+
+   &__content {
+      padding: 0;
+      max-width: 1250px;
+      margin: 0 auto;
+   }
+
+   &__quote {
+      font-style: italic;
+   }
+
+   &__cite {
+      text-align: right;
+   }
+}
+
+.main-hero {
+   text-shadow: 2px 2px hex-to-rgba($black, 0.4);
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   text-align: center;
+   position: absolute;
+   left: 0;
+   top: 80%;
+   transform: translateY(-80%);
+   width: 100%;
+   z-index: 8;
+   font-family: $font-crimson-pro;
+
+   @include breakpoint(375px) {
+      top: 60%;
+      transform: translateY(-60%);
+   }
+
+   @include breakpoint(500px) {
+      top: 50%;
+      transform: translateY(-50%);
+   }
+
+   @include breakpoint($screen-m-min) {
+      top: 40%;
+      transform: translateY(-40%);
+   }
+
+   @include breakpoint($screen-l-min) {
+      top: 60%;
+      transform: translateY(-60%);
+   }
+
+   &__brand {
+      font-family: $font-smile;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      line-height: 1;
+      order: 2;
+      width: 100%;
+
+      @include breakpoint($screen-m-min) {
+         margin: $padding-horizontal 0;
+      }
+   }
+
+   &__title {
+      font-family: $font-smile;
+      font-size: 36px;
+      margin: 0;
+      padding-right: ($gutter-width/3);
+      text-transform: uppercase;
+
+      @include breakpoint(400px) {
+         font-size: 42px;
+      }
+
+      @include breakpoint(500px) {
+         font-size: 50px;
+      }
+
+      @include breakpoint(600px) {
+         font-size: 70px;
+      }
+
+      @include breakpoint(700px) {
+         font-size: 80px;
+      }
+
+      @include breakpoint($screen-m-min) {
+         font-size: 90px;
+      }
+
+      @include breakpoint($screen-l-min) {
+         font-size: 100px;
+      }
+
+      @include breakpoint($screen-xl-min) {
+         font-size: 120px;
+      }
+
+      @include breakpoint($screen-xxl-min) {
+         font-size: 150px;
+      }
+
+      @include breakpoint($screen-xxxl-min) {
+         font-size: 175px;
+      }
+
+
+      span {
+         display: none;
+      }
+
+      &__img {
+         width: 100px;
+
+         @include breakpoint($screen-m-min) {
+            width: 120px;
+         }
+
+         @include breakpoint($screen-l-min) {
+            width: 150px;
+         }
+
+         @include breakpoint($screen-xl-min) {
+            width: 200px;
+         }
+
+         @include breakpoint($screen-xxl-min) {
+            width: 225px;
+         }
+
+         @include breakpoint($screen-xxxl-min) {
+            width: 250px;
+         }
+      }
+   }
+
+   &__info {
+      opacity: 0.9;
+      position: relative;
+      order: 1;
+      white-space: nowrap;
+      font-size: 0;
+
+      span {
+         display: inline-block;
+         font-size: 16px;
+         letter-spacing: 0.125em;
+
+         @include breakpoint(400px) {
+            font-size: 18px;
+         }
+
+         @include breakpoint(600px) {
+            font-size: 24px;
+         }
+
+         @include breakpoint($screen-xl-min) {
+            font-size: 28px;
+         }
+      }
+
+      span[aria-label] {
+         &:before {
+            content: ".";
+            color: #b80d1d;
+            display: inline-block;
+            margin: 0 0.5em;
+         }
+      }
+   }
+
+   &__slogan {
+      font-size: 28px;
+      position: relative;
+      word-spacing: 0.2em;
+      order: 3;
+
+      @include breakpoint(400px) {
+         font-size: 30px;
+      }
+
+      @include breakpoint(600px) {
+         font-size: 36px;
+      }
+
+      @include breakpoint($screen-m-min) {
+         font-size: 40px;
+      }
+
+      @include breakpoint($screen-xl-min) {
+         font-size: 50px;
+      }
+
+      @include breakpoint($screen-xxl-min) {
+         font-size: 60px;
+      }
+
+      &:after {
+         content: ".";
+         color: #b80d1d;
+         display: inline-block;
+         opacity: 0.75;
+         word-spacing: normal
+      }
+   }
+}

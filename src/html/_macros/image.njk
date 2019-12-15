@@ -1,35 +1,58 @@
-{% set imageRoot = '/assets/img/' %}
-
-{% macro image(src, alt='', root=false, className=false) %}
-   {% set classCode = 'class=' + className %}
-
-   <img
-      src="{{ root if root else imageRoot }}{{ src }}"
-      alt="{{ alt }}"
-      {{ classCode if className |safe }}
-   >
-{% endmacro %}
-
-{% macro circle(src, alt='', root=false) %}
-   {{ image(src, alt, root, 'circle') }}
-{% endmacro %}
-
 {% macro picture(jpg=false, webp=false, png=false, alt='', className=false) %}
-   {% set classCode = 'class=' + className %}
+   {% set classCode =' class="' + className + '"' if className %}
 
    <picture>
       {% if webp %}
-         <source srcset="{{ imageRoot }}{{ webp }}" type="image/webp">
+         <source srcset="{{ webp }}" type="image/webp">
       {% endif %}
 
       {% if jpg %}
-         <source srcset="{{ imageRoot }}{{ jpg }}" type="image/jpeg">
+         <source srcset="{{ jpg }}" type="image/jpeg">
       {% endif %}
 
       {% if png %}
-         <source srcset="{{ imageRoot }}{{ png }}" type="image/png">
+         <source srcset="{{ png }}" type="image/png">
       {% endif %}
 
-      <img src="{{ imageRoot }}{{ png if png else jpg }}" alt="{{ alt }}" {{ classCode if className |safe }}>
+      <img src="{{ png if png else jpg }}" alt="{{ alt }}"{{ classCode if className |safe }}>
    </picture>
 {% endmacro %}
+
+{% macro lazyPic(jpg=false, webp=false, png=false, alt='', className='') %}
+   {% set classes = 'lazy' %}
+
+   {% if className %}
+      {% set classes = classes + ' ' + className %}
+   {% endif %}
+
+   <picture>
+      {% if webp %}
+         <source data-srcset="{{ webp }}" type="image/webp">
+      {% endif %}
+
+      {% if jpg %}
+         <source data-srcset="{{ jpg }}" type="image/jpeg">
+      {% endif %}
+
+      {% if png %}
+         <source data-srcset="{{ png }}" type="image/png">
+      {% endif %}
+
+      <img class="{{ classes }}" data-src="{{ png if png else jpg }}" alt="{{ alt }}">
+
+      <noscript>
+         <img class="{{ classes }}" src="{{ png if png else jpg }}" alt="{{ alt }}">
+      </noscript>
+   </picture>
+{% endmacro %}
+
+
+<picture>
+    <source type="image/webp"
+        data-srcset="lazy_400.webp 400w, lazy_800.webp 800w"
+        data-sizes="100w">
+    <img alt="A lazy image" class="lazy"
+        data-src="lazy.jpg"
+        data-srcset="lazy_400.jpg 400w, lazy_800.jpg 800w"
+        data-sizes="100w">
+</picture

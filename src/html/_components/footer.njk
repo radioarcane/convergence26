@@ -1,2 +1,32 @@
-<footer class="footer" role="contentinfo">
+<footer id="footer" class="footer" role="contentinfo">
+   <div class="container">
+      <nav class="footer__nav">
+         <ul class="footer__menu">
+            <li class="footer__menu__item">
+               <a class="footer__menu__link" href="/">Home</a>
+            </li>
+            <li class="footer__menu__item">
+               <a class="footer__menu__link" href="/hotel">Hotel</a>
+            </li>
+            <li class="footer__menu__item">
+               <a class="footer__menu__link" href="/venue">Venue</a>
+            </li>
+            <li class="footer__menu__item">
+               <a class="footer__menu__link" href="/louisville">Louisville</a>
+            </li>
+            <li class="footer__menu__item">
+               <a class="footer__menu__link" href="/committee">Committee</a>
+            </li>
+            <li class="footer__menu__item">
+               <a class="footer__menu__link" href="/contact">Contact</a>
+            </li>
+         </ul>
+      </nav>
+      <nav class="footer__social">
+         {% include "_partials/social-icons.njk" %}
+      </nav>
+      <div class="footer__copy">
+         <p>© {{ copyYear }} Convergence 26</p>
+      </div>
+   </div>
 </footer>

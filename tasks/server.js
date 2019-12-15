@@ -1,7 +1,6 @@
 /*
    Local Development Server
 */
-import gulp from 'gulp';
 import Browser from 'browser-sync';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
@@ -14,7 +13,14 @@ const bundler = webpack(webpackConfig);
 
 export function server() {
    const config = {
+      //https: true,
+      //port: 9999,
       serveStatic: ['./public', './src/static', {
+         dir: './src/images',
+         route: '/images'
+      }, {
+         dir: './tmp/images',
+         route: '/images'
       }],
       middleware: [
          //webpackDevMiddleware(bundler, { /* options */ }),

@@ -1,0 +1,26 @@
+{% import '_macros/image.njk' as img %}
+
+<section class="hero">
+   <div class="hero__container">
+      <div class="hero__content">
+         <div class="main-hero">
+            <div class="main-hero__brand">
+               <h1 class="main-hero__title">Convergence <span aria-label="26">26</span></h1>
+
+               {{ img.picture(
+                  png="/images/convergence-26-logo.png",
+                  webp="/images/convergence-26-logo.webp",
+                  alt="Convergence 26 Logo",
+                  className="main-hero__title__img"
+               )}}
+            </div>
+            <div class="main-hero__info">
+               <span>Louisville</span> <span aria-label="2020">MXXX</span>
+            </div>
+            <div class="main-hero__slogan">
+               Live deliciously
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

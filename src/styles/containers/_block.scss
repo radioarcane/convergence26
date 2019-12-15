@@ -1,0 +1,14 @@
+
+.block {
+   padding: $padding-vertical 0;
+
+   &--x2 {
+      padding: ($padding-vertical * 2) 0;
+   }
+
+   &:after {
+       content: "";
+       display: table;
+       clear: both;
+   }
+}

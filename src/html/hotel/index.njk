@@ -1,0 +1,182 @@
+{% set pageTitle = 'The Hotel | Convergence 26 - Louisville, KY' %}
+
+{% import '_macros/image.njk' as img %}
+
+{% extends '_layouts/default.njk' %}
+
+{% set westTowerRooms = [{
+   img: "west-tower-bedroom-1",
+   alt: "Galt House: West Tower Bedroom",
+   caption: "Bedroom"
+}, {
+   img: "west-tower-bedroom-2",
+   alt: "Galt House: West Tower Bedroom",
+   caption: "Bedroom"
+}, {
+   img: "west-tower-bathroom-1",
+   alt: "Galt House: West Tower Bathroom",
+   caption: "Bathroom"
+}, {
+   img: "west-tower-bathroom-2",
+   alt: "Galt House: West Tower Bathroom",
+   caption: "Bathroom"
+}] %}
+
+{% set eastTowerRooms = [{
+   img: "east-tower-parlor",
+   alt: "Galt House: East Tower Suite Parlor",
+   caption: "Parlor"
+}, {
+   img: "east-tower-bedroom",
+   alt: "Galt House: East Tower Bedroom",
+   caption: "Bedroom"
+}, {
+   img: "east-tower-bathroom",
+   alt: "Galt House: East Tower Bathroom",
+   caption: "Bathroom"
+}] %}
+
+{% set conservatory = [{
+   img: "galt-house-the-conservatory",
+   alt: "Galt House Conservatory (Outside View)"
+}, {
+   img: "galt-house-conservatory",
+   alt: "Galt House Conservatory (Inside View)"
+}] %}
+
+{% block main %}
+   <article class="container">
+      <section class="block">
+         <h1 class="title">The Hotel</h1>
+
+         <div class="pb-1">
+            <figure>
+               {{ img.lazyPic(
+                     jpg="/images/hotel/galt-house-hotel-suites.jpg",
+                     webp="/images/hotel/galt-house-hotel-suites.webp",
+                     alt="Galt House Hotel & Suites",
+                     className="border border--light"
+                  )
+               }}
+            </figure>
+         </div>
+
+         <p>The official hotel for Convergence 26 is the gorgeous, spacious, well-appointed, river-adjacent <a href="https://book.passkey.com/go/Convergence26" target="_blank">Galt House</a>.</p>
+
+         <p>Convergence 26 room booking for the Galt House Hotel is now immediately <a href="https://book.passkey.com/go/Convergence26" target="_blank">available</a>. West Tower deluxe rooms (two queen beds or one king bed) are $159, and East Tower executive suites (two queen beds and a separate living room with sofa bed, dining table, mini-fridge, and wet bar) are $189.</p>
+
+         <p>A waterfront suite version of the West Tower room is also available for $209.</p>
+
+         <p class="pb-1">The block ranges from Friday to Monday, but for those who’d prefer to spend more time with us, we’ve also arranged for these discounted rates to be honored for guests within our block for the three days pre and post. Feel free to check in as early as Tuesday, if that’s your pleasure. If the room type on the date range you’re seeking does not appear on Passkey (if for example, you’d like to check in early and leave late), please <a href="/contact">contact us</a> so that we can have that immediately added. Not all available rooms are readily blocked for dates outside of the officially-official Convergence event dates, and while we’ll be keeping an eye on the room block status in the effort to preempt things temporarily getting filled, please feel free to <a href="/contact">reach out to us</a> right away if you encounter any difficulties. <a href="https://book.passkey.com/go/Convergence26" target="_blank">https://book.passkey.com/go/Convergence26</a></p>
+
+         <div class="text-center">
+            <a class="btn" href="https://book.passkey.com/go/Convergence26" target="_blank">
+               Book A Room for Convergence 26
+            </a>
+         </div>
+      </section>
+
+      <section class="block">
+         <h3 class="title">Galt House: West Tower Deluxe Rooms</h3>
+
+         <div class="grid grid--collapse grid--center-items text-center">
+            {% for item in westTowerRooms %}
+               <div class="grid__item xs-12 sm-6">
+                  <figure>
+                     {{ img.lazyPic(
+                           jpg="/images/hotel/" + item.img + ".jpg",
+                           webp="/images/hotel/" + item.img + ".webp",
+                           alt=item.alt,
+                           className="border border--light"
+                        )
+                     }}
+
+                     <figcaption>{{ item.caption }}</figcaption>
+                  </figure>
+               </div>
+            {% endfor %}
+         </div>
+      </section>
+
+      <section class="block">
+         <h3 class="title">Galt House: East Tower Executive Suites</h3>
+
+         <div class="grid grid--collapse grid--center-items text-center">
+            {% for item in eastTowerRooms %}
+               <div class="grid__item xs-12 sm-6">
+                  <figure>
+                     {{ img.lazyPic(
+                           jpg="/images/hotel/" + item.img + ".jpg",
+                           webp="/images/hotel/" + item.img + ".webp",
+                           alt=item.alt,
+                           className="border border--light"
+                        )
+                     }}
+
+                     <figcaption>{{ item.caption }}</figcaption>
+                  </figure>
+               </div>
+            {% endfor %}
+         </div>
+      </section>
+
+      <section>
+         <h3 class="title">Galt House: Waterfront Suite</h3>
+
+         <div class="grid grid--collapse grid--center-items text-center">
+            <div class="grid__item xs-12 sm-6">
+               <figure>
+                  {{ img.lazyPic(
+                        jpg="/images/hotel/waterfront-suite-living-room.jpg",
+                        webp="/images/hotel/waterfront-suite-living-room.webp",
+                        alt="Galt House Waterfront Suite Living Room",
+                        className="border border--light"
+                     )
+                  }}
+
+                  <figcaption>
+                     Waterfront Suite Living Room
+                  </figcaption>
+               </figure>
+            </div>
+         </div>
+      </section>
+
+      <section class="block pb-1">
+         <h3 class="title">Galt House: Conservatory</h3>
+
+         <div class="grid grid--collapse grid--center-items text-center">
+            {% for item in conservatory %}
+               <div class="grid__item xs-12 sm-6">
+                  <figure>
+                     {{ img.lazyPic(
+                           jpg="/images/hotel/" + item.img + ".jpg",
+                           webp="/images/hotel/" + item.img + ".webp",
+                           alt=item.alt,
+                           className="border border--light"
+                        )
+                     }}
+                  </figure>
+               </div>
+            {% endfor %}
+         </div>
+      </section>
+
+      <section class="block pb-2">
+         <h3 class="title">Hotel Features</h3>
+
+         <ul>
+            <li>Complimentary wireless internet in the guest rooms and public areas of the hotel</li>
+            <li>Complimentary use of Club 360° Fitness Center (18th Floor, East Tower), which features a panoramic view of the river, and outdoor pool (3rd Floor, West Tower)</li>
+            <li>Xhale Salon ~ Spa (17th Floor, East Tower)</li>
+            <li>Retail Row — five local boutique shops (3rd Floor, West Tower)</li>
+            <li>Seven different restaurants and lounges located within the towers and Conservatory—including the brand new Walker's Exchange brasserie and the newly-renovated Jockey Silks Bourbon Bar</li>
+            <li>Various comfortable public areas in which to casually gather, including the Conservatory (the bridge connecting the towers) and the newly-renovated lobby lounges</li>
+            <li>Concierge service and in-room dining</li>
+            <li>An artist in residence program; feel free to visit the artist’s studio in the main corridor of the hotel.</li>
+         </ul>
+
+         <p>This hotel is four miles (a nine-minute drive) from the venue, Art Sanctuary, and is within short walking distance of dozens of restaurants. (Yelp returns 165 results for restaurants within one mile of the hotel, about sixty of which have weekend hours; it’s downtown.) It’s also within walking distance of Louisville’s Museum Row.</p>
+      </section>
+   </article>
+{% endblock %}

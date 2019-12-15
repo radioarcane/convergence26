@@ -1,0 +1,233 @@
+.masthead__nav {
+   position: relative;
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+
+   @include breakpoint($screen-l-min) {
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+   }
+
+   @include breakpoint($screen-xl-min) {
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+   }
+}
+
+
+.masthead__nav__top {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   align-content: flex-start;
+   padding: 8px ($gutter-width/2) 0;
+
+   @include breakpoint($screen-l-min) {
+      width: auto;
+   }
+}
+
+.masthead__logo {
+   width: 80px;
+
+   @include breakpoint($screen-l-min) {
+      width: 100px;
+   }
+}
+
+.masthead__hamburger,
+.masthead__close {
+   color: $white;
+   cursor: pointer;
+   border: 1px solid $white;
+   font-size: 28px;
+   padding: 0 8px 6px;
+   transition: all 200ms ease-in-out;
+   background: transparent;
+   line-height: 1.5;
+
+   &:hover,
+   &:focus {
+      color: darken($white, 15%);
+      border-color: darken($white, 15%);
+   }
+
+   @include breakpoint($screen-l-min) {
+      display: none;
+   }
+}
+
+.masthead__close {
+   display: none;
+}
+
+.masthead__nav--open {
+   height: 100vh;
+   width: 100%;
+   position: relative;
+   top: 0;
+   left: 0;
+   background:hex-to-rgba($black, 0.9);
+   background: linear-gradient(315deg, hex-to-rgba(#2d3436, 0.9) 0%, hex-to-rgba($black, 0.9) 74%);
+
+   @include breakpoint($screen-l-min) {
+      background: transparent;
+      background-image: none;
+      position: relative;
+      height: auto;
+   }
+
+   .masthead__hamburger {
+      display: none;
+   }
+
+   .masthead__close {
+      display: inline-block;
+
+      @include breakpoint($screen-l-min) {
+         display: none;
+      }
+   }
+
+   .mast-nav {
+      left: 0;
+      width: 100%;
+      position: relative;
+   }
+
+   .mast-social-nav {
+      left: 0;
+      width: 100%;
+      position: relative;
+   }
+}
+
+.mast-nav {
+   left: 3000px;
+   width: 0;
+   position: relative;
+   transition: left 200ms ease-in-out;
+   position: absolute;
+   overflow-y: auto;
+
+   @include breakpoint($screen-l-min) {
+      left: auto;
+      width: 100%;
+      position: relative;
+   }
+}
+
+.nav-menu {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   color: $white;
+   display: flex;
+   flex-direction: column;
+   text-align: right;
+   padding: 1em 0 0;
+
+   @include breakpoint($screen-l-min) {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 18px;
+   }
+
+   @include breakpoint($screen-xl-min) {
+      font-size: 22px;
+   }
+
+   &__item {
+      border-top: 1px solid hex-to-rgba($white-smoke, 0.5);
+
+      @include breakpoint($screen-l-min) {
+         border: none;
+         margin: 0 0.5em;
+      }
+
+      &:last-child {
+         border-bottom: 1px solid hex-to-rgba($white-smoke, 0.5);
+
+         @include breakpoint($screen-l-min) {
+            border: none;
+         }
+      }
+   }
+
+   &__link {
+      text-decoration: none;
+      color: $white;
+      display: block;
+      background-color: transparent;
+      transition: all 140ms ease-in-out;
+      padding: .5em ($gutter-width/2);
+
+      @include breakpoint($screen-l-min) {
+         display: inline-block;
+         border-bottom: 1px solid transparent;
+      }
+
+      &:hover,
+      &:focus {
+         color: darken($white, 20%);
+         background-color: #2d3436;
+         background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+
+         @include breakpoint($screen-l-min) {
+            background: transparent;
+            border-color: $white-smoke;
+         }
+      }
+   }
+}
+
+.mast-social-nav {
+   font-size: 45px;
+   color: $white;
+   position: absolute;
+   z-index: 10;
+   position: absolute;
+   left: -3000px;
+   right: 0;
+   width: 0;
+   background-image: linear-gradient(315deg, hex-to-rgba(#2d3436, 0.9) 0%, hex-to-rgba($black, 0.9) 74%);
+
+   @include breakpoint($screen-l-min) {
+      left: auto;
+      width: auto;
+      position: relative;
+      font-size: 40px;
+      padding-right: $gutter-width/2;
+      background: transparent;
+   }
+
+   @include breakpoint($screen-xl-min) {
+      font-size: 45px;
+   }
+}
+
+.social-nav {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   position: relative;
+   justify-content: center;
+
+   &__item {
+      margin: 0 0.25em;
+   }
+
+   &__link {
+      color: $white-smoke;
+
+      &:hover,
+      &:focus {
+         color: darken($white-smoke, 15%);
+      }
+   }
+}

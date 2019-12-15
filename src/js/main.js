@@ -1,11 +1,19 @@
 import '@babel/polyfill';
 
-import backgroundNoise from './components/background-noise';
-import { init as initNavigation } from './components/navigation';
-import { init as initScrollTo } from './components/scroll-to';
-import { init as initSubmissionForm } from './components/submission-form';
+import LazyLoad from "vanilla-lazyload";
 
-backgroundNoise();
-initNavigation();
-initScrollTo();
-initSubmissionForm();
+var myLazyLoad = new LazyLoad();
+
+var navToggleOpen = document.getElementById('nav-toggle-open');
+var navToggleClose = document.getElementById('nav-toggle-close');
+var navContainer = document.querySelector('.masthead__nav');
+
+navToggleOpen.addEventListener('click', function(ev) {
+   ev.preventDefault();
+   navContainer.classList.add('masthead__nav--open');
+});
+
+navToggleClose.addEventListener('click', function(ev) {
+   ev.preventDefault();
+   navContainer.classList.remove('masthead__nav--open');
+});

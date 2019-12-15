@@ -1,0 +1,56 @@
+{% set pageTitle = 'The Venue | Convergence 26 - Louisville, KY' %}
+
+{% import '_macros/image.njk' as img %}
+
+{% extends '_layouts/default.njk' %}
+
+{% set venuePics = [{
+   img: "scary-black-art-sanctuary",
+   alt: "Scary Black performing at Art Sanctuary"
+}, {
+   img: "radio-arcane-at-art-sanctuary",
+   alt: "Radio Arcane Goth Night at Art Sanctuary"
+}, {
+   img: "vyva-melinkolya-art-sanctuary",
+   alt: "Vyva Melinkolya performing at Art Sanctuary"
+}, {
+   img: "art-sanctuary-gallery",
+   alt: "Gallery Space at Art Sanctuary"
+}, {
+   img: "art-sanctuary-building",
+   alt: "Art Sanctuary Building (Outside View)"
+}, {
+   img: "art-sanctuary-layout",
+   alt: "Art Sanctuary Building Layout"
+}] %}
+
+
+{% block main %}
+   <article class="container">
+      <div class="block">
+         <h1 class="title">The Venue</h1>
+
+         <p>
+            Louisville’s Goth scene is fortunate enough to have a physical home of its own—<a href=" http://www.art-sanctuary.org" target="_blank">Art Sanctuary</a>, which is named for its community-oriented arts collective that was founded to support local visual, literary, and performing arts. It’s a massive, 26,000 sq. ft. structure, roughly half of which is dedicated to a capacious, high-ceilinged event facility with an expansive stage and full bar, and in a separate, somewhat quieter room, an art gallery with ample seating for those who’d prefer to relax and enjoy conversation.
+         </p>
+
+         <p class="pb-1">Incidentally, in its capacity as a bar, Art Sanctuary is licensed as an 18+, 4am venue. Post-concert dancing will continue until you’re on the verge of collapse, in accordance with our local custom.</p>
+
+         <div class="grid grid--collapse grid--center-items text-center">
+            {% for item in venuePics %}
+               <div class="grid__item xs-12 sm-6 pb-1">
+                  <figure>
+                     {{ img.lazyPic(
+                           jpg="/images/venue/" + item.img + ".jpg",
+                           webp="/images/venue/" + item.img + ".webp",
+                           alt=item.alt,
+                           className="border border--light"
+                        )
+                     }}
+                  </figure>
+               </div>
+            {% endfor %}
+         </div>
+      </div>
+   </article>
+{% endblock %}

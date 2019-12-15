@@ -1,0 +1,16 @@
+
+@function golden-ratio($fontSize) {
+   @return $fontSize * 1.68;
+}
+
+@function perfect-forth($fontSize) {
+   @return $fontSize * 1.333;
+}
+
+@function major-second($fontSize) {
+   @return $fontSize * 1.125;
+}
+
+@function augmented-forth($fontSize) {
+   @return $fontSize * 1.414;
+}

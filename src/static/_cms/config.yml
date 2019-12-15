@@ -1,0 +1,24 @@
+backend:
+  name: github
+  branch: master
+  repo: radioarcane/convergence26-dev
+
+media_folder: "/src/images"
+public_folder: "/images"
+
+site_url: https://www.convergence26.com
+display_url: https://www.convergence26.com
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "annoucements"
+    label: "Annoucements"
+    label_singular: "Annoucement"
+    folder: "_posts/annoucements"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD"}
+      - {label: "Content", name: "content", widget: "markdown", default: ""}

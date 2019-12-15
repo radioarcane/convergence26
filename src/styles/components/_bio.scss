@@ -1,0 +1,74 @@
+.bio {
+   margin: 2.5rem auto;
+   max-width: 1400px;
+   border: 1px solid hex-to-rgba($white-smoke, 0.4);
+   border-radius: 8px;
+   padding: 1.5rem $gutter-width;
+   background: hex-to-rgba($white-smoke, 0.05);
+
+   &:after {
+       content: "";
+       display: table;
+       clear: both;
+   }
+
+   &__title {
+      @include breakpoint($screen-m-min) {
+         float: left;
+         width: calc(100% - 300px);
+      }
+
+      @include breakpoint($screen-l-min) {
+         width: calc(100% - 400px);
+      }
+
+      @include breakpoint($screen-xl-min) {
+         width: calc(100% - 500px);
+      }
+   }
+
+   &__content {
+      @include breakpoint($screen-m-min) {
+         float: left;
+         width: calc(100% - 300px);
+      }
+
+      @include breakpoint($screen-l-min) {
+         width: calc(100% - 400px);
+      }
+
+      @include breakpoint($screen-xl-min) {
+         width: calc(100% - 500px);
+      }
+   }
+
+   &__img {
+      text-align: center;
+      border-radius: 10px;
+
+      img {
+         max-height: 300px;
+         border: 1px solid hex-to-rgba($white-smoke, 0.75);
+
+         @include breakpoint($screen-l-min) {
+            max-height: none;
+         }
+      }
+
+      @include breakpoint($screen-m-min) {
+         float: right;
+         width: 300px;
+         padding-left: $gutter-width ;
+         text-align: right;
+      }
+
+      @include breakpoint($screen-l-min) {
+         padding-left: $gutter-width * 2;
+         width: 400px;
+      }
+
+      @include breakpoint($screen-xl-min) {
+         width: 500px;
+      }
+   }
+}
