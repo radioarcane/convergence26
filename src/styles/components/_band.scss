@@ -1,0 +1,73 @@
+.band {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 2.5rem auto;
+   max-width: 1400px;
+   border: 1px solid hex-to-rgba($white-smoke, 0.4);
+   border-radius: 8px;
+   padding: 1rem ($gutter-width/2);
+   background: hex-to-rgba($white-smoke, 0.05);
+
+   @include breakpoint($screen-m-min) {
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+   }
+
+   &__title {
+      width: 100%;
+   }
+
+   &__figure {
+      width: 100%;
+      text-align: center;
+      max-width: 500px;
+      padding: 0;
+      margin: 0 0 1.5rem;
+
+      @include breakpoint($screen-l-min) {
+         width: 40%;
+         padding-right: $gutter-width;
+      }
+   }
+
+   &__img {
+      border-radius: 10px;
+      border: 1px solid hex-to-rgba($white-smoke, 0.75);
+   }
+
+   &__bio {
+      width: 100%;
+
+      @include breakpoint($screen-l-min) {
+         width: 60%
+      }
+   }
+
+   &__links {
+
+      a {
+         color: $white;
+         margin-right: 0.5rem;
+
+         &:last-child {
+            margin-right: 0;
+         }
+
+         &:focus,
+         &:hover,
+         &:active {
+            opacity: 0.75;
+         }
+      }
+
+      width: 100%;
+      font-size: 40px;
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+
+      @include breakpoint($screen-l-min) {
+         justify-content: center;
+      }
+   }
+}

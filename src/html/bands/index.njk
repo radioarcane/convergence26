@@ -1,0 +1,56 @@
+{% set pageTitle = 'Bands | Convergence 26 - Louisville, KY' %}
+
+{% import '_macros/image.njk' as img %}
+
+{% extends '_layouts/default.njk' %}
+
+
+{% block main %}
+   <div class="container">
+      <div class="block">
+         <h1 class="title">Bands</h1>
+
+         <p><em>Expect more announcements in the coming days...</em></p>
+
+         <article class="band">
+            <h2 class="band__title">Twin Tribes</h2>
+
+            <figure class="band__figure">
+               {{ img.picture(
+                  jpg="/images/bands/twin-tribues.jpg",
+                  webp="/images/bands/twin-tribes.webp",
+                  alt="Twin Tribes",
+                  className="band__img"
+               ) }}
+            </figure>
+
+            <div class="band__bio">
+               <p>Twin Tribes is a dark synth / post-punk duo based in Brownsville, Texas. Formed by Luis Navarro (vocals, guitar, synth, drum machines) and Joel Niño, Jr. (bass, synth, vocals) in 2017, the band gathers their influences from the period of the dark ‘80s. Darkwave, post-punk, and coldwave are genres that the band summon using analog synthesizers and drum machines; dark melodic sounds, lyrics of the undead, the occult, and parallel universes are what conjure Twin Tribes.</p>
+            </div>
+
+            <footer class="band__links">
+
+               <a href="https://www.facebook.com/TwinTribes" target="_blank" title="Twin Tribes @ Facebook">
+                  <img src="/images/icons/facebook-square.svg" inline class="icon" />
+               </a>
+
+               <a href="https://www.instagram.com/twin_tribes" target="_blank" title="Twin Tribes @ Instagram">
+                  <img src="/images/icons/instagram.svg" inline class="icon" />
+               </a>
+
+               <a href="https://www.youtube.com/twintribes" target="_blank" title="Twin Tribes @ YouTube">
+                  <img src="/images/icons/youtube.svg" inline class="icon" />
+               </a>
+
+               <a href="https://twintribes.bandcamp.com" target="_blank" title="Twin Tribes @ Bandcamp">
+                  <img src="/images/icons/bandcamp.svg" inline class="icon" />
+               </a>
+
+               <a href="https://open.spotify.com/artist/7wxXs62y8Gjf6c6pxrnWIl" target="_blank" title="Twin Tribes @ Spotify">
+                  <img src="/images/icons/spotify.svg" inline class="icon" />
+               </a>
+            </footer>
+         </article>
+      </div>
+   </div>
+{% endblock %}
