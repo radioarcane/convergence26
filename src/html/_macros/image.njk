@@ -14,7 +14,7 @@
          <source srcset="{{ png }}" type="image/png">
       {% endif %}
 
-      <img src="{{ png if png else jpg }}" alt="{{ alt }}"{{ classCode if className |safe }}>
+      <img src="{{ png if png else jpg }}" alt="{{ alt }}"{{ classCode |safe if className }}>
    </picture>
 {% endmacro %}
 
