@@ -30,12 +30,12 @@
          </main>
 
          {% include "_components/footer.njk" %}
-
-         {% block footer_scripts %}
-            {% include "_partials/footer-scripts.njk" %}
-         {% endblock %}
-
-         {% block custom_scripts %}{% endblock %}
       </div>
+
+      {% block footer_scripts %}
+         {% include "_partials/footer-scripts.njk" %}
+      {% endblock %}
+
+      {% block custom_scripts %}{% endblock %}
    </body>
 </html>
