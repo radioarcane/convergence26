@@ -5,6 +5,11 @@
    "cacheBust": "5",
    "social": {
       "facebook": "https://www.facebook.com/convergence26",
+      "facebookEvent": "https://www.facebook.com/events/223079838724992",
       "instagram": "https://www.instagram.com/convergence2020"
-   }
+   },
+   "tickets": {
+      "eventbrite": "https://www.eventbrite.com/e/convergence-26-tickets-92382830533"
+   },
+   "spotifyPlaylist": "https://open.spotify.com/playlist/4Kz64lyHzguMoW6I69bUlm"
 }
