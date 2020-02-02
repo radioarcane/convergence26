@@ -1,0 +1,25 @@
+{% set pageTitle = 'Tickets | Convergence 26 - Louisville, KY' %}
+
+{% import '_macros/image.njk' as img %}
+
+{% extends '_layouts/default.njk' %}
+
+{% block main %}
+   <article class="container">
+      <div class="block">
+         <h1 class="title">Tickets</h1>
+
+         <h5 class="pb-1">Tickets now available through <a href="{{ tickets.eventbrite }}" target="_blank">Eventbrite</a>.</h5>
+
+         <div class="pb-2">
+            <a href="{{ tickets.eventbrite }}" target="_blank">
+               {{ img.picture(
+                  jpg="/images/convergence26-banner-1200x675.jpg",
+                  webp="/images/convergence26-banner-1200x675.webp",
+                  alt="Convergence 26 Louisville Info"
+               ) }}
+            </a>
+         </div>
+      </div>
+   </article>
+{% endblock %}
