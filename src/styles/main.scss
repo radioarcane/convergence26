@@ -41,6 +41,45 @@
 @import "util/text";
 
 
+.ticket-opts {
+   @include fluid-type($screen-s-min, $screen-xxl-min, 14px, 18px);
+   width: 100%;
+   margin: 2rem auto;
+
+   &__row {
+      display: flex;
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: flex-start;
+      border: 2px solid hex-to-rgba(darken($white-smoke, 30%), .8);
+      margin: -2px 0 0;
+      padding: 15px;
+   }
+
+   &__info {
+      width: 80%;
+   }
+
+   &__price {
+      text-align: right;
+      width: 20%;
+      font-size: 22px;
+   }
+
+   &__title {
+      margin: 0 0 0.25em;
+      font-family: $body-font;
+   }
+
+   &__desc {
+      opacity: .9;
+   }
+
+
+}
+
 .no-js {
    .lazy[data-src] {
       display: none;

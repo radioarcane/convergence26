@@ -1,0 +1,35 @@
+{% set pageTitle = 'DJs | Convergence 26 - Louisville, KY' %}
+
+{% import '_macros/image.njk' as img %}
+
+{% extends '_layouts/default.njk' %}
+
+{% block main %}
+   <article class="container">
+      <div class="block">
+         <h1 class="title">DJs</h1>
+
+         <p>We’re pleased to announce the DJ lineup for Convergence 26…</p>
+
+         <p>
+            The Pirate Twins (Scary Lady Sarah & William Faith), DJ Azy & DJ MAUS (Obscura Undead), DJ Ichabod, DJ Mistress McCutchan, Philly Peroxide, DJ Skeletal, and Radio Arcane’s AndrOspore, Brian Drabant, DJ Kaleidoscope, Osiris Ani, & Sorrow-Vomit.
+         </p>
+
+         <p><em>Bio's and addition info coming soon...</em></p>
+
+         <a class="btn" href="{{ tickets.eventbrite }}" target="_blank">Tickets Now Available</a>
+
+         <br><br>
+
+         <div class="pb-2">
+            <a href="{{ tickets.eventbrite }}" target="_blank">
+               {{ img.picture(
+                  jpg="/images/convergence26-lineup.jpg",
+                  webp="/images/convergence26-lineup.webp",
+                  alt="Convergence 26 Louisville Lineup"
+               ) }}
+            </a>
+         </div>
+      </div>
+   </article>
+{% endblock %}
