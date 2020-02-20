@@ -5,7 +5,7 @@
 {% extends '_layouts/default.njk' %}
 
 {% block main %}
-   <article class="container">
+   <div class="container">
       <div class="block">
          <h1 class="title">DJs</h1>
 
@@ -19,17 +19,34 @@
 
          <a class="btn" href="{{ tickets.eventbrite }}" target="_blank">Tickets Now Available</a>
 
-         <br><br>
+         <br>
 
-         <div class="pb-2">
-            <a href="{{ tickets.eventbrite }}" target="_blank">
+         <article id="pirate-twins" class="band">
+            <h2 class="band__title">The Pirate Twins</h2>
+
+            <figure class="band__figure">
                {{ img.picture(
-                  jpg="/images/convergence26-lineup.jpg",
-                  webp="/images/convergence26-lineup.webp",
-                  alt="Convergence 26 Louisville Lineup"
+                  jpg="/images/djs/pirate-twins.jpg",
+                  webp="/images/djs/pirate-twins.webp",
+                  alt="The Pirate Twins",
+                  className="band__img"
                ) }}
-            </a>
-         </div>
+            </figure>
+
+            <div class="band__bio">
+               <p>The Pirate Twins are the DJ team of Scary Lady Sarah and William Faith.</p>
+
+               <p>The duo have spun at events all over North America and Europe, with annual appearances at Wave-Gotik-Treffen in Leipzig, Germany. Sarah—who also spun at C1, C5, C6, the “C7 Rescue,” C8, C9, C10, C12, C19, C20, C21, and C23—has been a professional working club DJ since 1988, and her bi-monthly club night, Nocturna, is now in its 32nd year.</p>
+
+               <p>The Pirate Twins spin a wide variety of music, including, but not limited to—current and classic post-punk, Goth, industrial, punk, glam, deathrock, ethereal, ambient, shoegaze, new wave, EBM, darkwave, dark indie, and more.</p>
+            </div>
+
+            <footer class="band__links">
+               <a href="https://www.facebook.com/thepiratetwins" target="_blank" title="The Pirate Twins @ Facebook">
+                  <img src="/images/icons/facebook-square.svg" inline class="icon" />
+               </a>
+            </footer>
+         </article>
       </div>
-   </article>
+   </div>
 {% endblock %}
