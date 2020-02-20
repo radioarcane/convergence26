@@ -30,6 +30,12 @@
       }
    }
 
+   &__caption {
+      font-size: 75%;
+      opacity: 0.9;
+      line-height: 1;
+   }
+
    &__img {
       border-radius: 10px;
       border: 1px solid hex-to-rgba($white-smoke, 0.75);

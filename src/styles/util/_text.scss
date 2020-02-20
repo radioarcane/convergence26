@@ -3,6 +3,10 @@
    text-align: center;
 }
 
+.text-right {
+   text-align: right;
+}
+
 .drop-cap {
    &:first-letter {
       font-size: 200%;
